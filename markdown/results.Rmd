@@ -1,0 +1,63 @@
+---
+title: "Win Big Results"
+author: "Jeffrey M. Pisklak"
+date: "`r Sys.Date()`"
+output: html_document
+bibliography: references.bib
+csl: apa-with-abstract.csl
+
+nocite: |
+  @R
+---
+
+<!-- https://www.w3schools.com/tags/tag_details.asp -->
+<style>
+details > summary {
+  padding: 4px;
+  cursor: pointer;
+  font-size: 2em;
+}
+</style>
+
+```{r setup, include = FALSE}
+options(pillar.print_max = Inf)
+
+if (!require(knitr)) {
+  install.packages("knitr")
+}
+if (!require(kableExtra)) {
+  install.packages("kableExtra")
+}
+if (!require(tidyverse)) {
+  install.packages("tidyverse")
+}
+
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+# Directory
+# opts_knit$set(root.dir = dirname(getwd())) #Rendering from this .Rmd file.
+opts_knit$set(root.dir = main_dir) # Rendering from generate_markdown.R
+
+opts_chunk$set(
+  echo = FALSE,
+  # include = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 7, fig.height = 5
+)
+```
+
+# EXPERIMENT 1A
+
+<!-- Participant Information -->
+```{r child = 'markdown/subject_info.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
