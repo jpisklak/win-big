@@ -61,3 +61,23 @@ opts_chunk$set(
 
 <br>
 
+<!-- Catch Trials -->
+```{r child = 'markdown/catch_trials.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
+<!-- Risk Pref Trials -->
+```{r child = 'markdown/risky_trials.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+

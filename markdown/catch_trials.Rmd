@@ -4,13 +4,13 @@
 
 <details>
   <summary>
-  Plot - Session means
+  Plot
   </summary>
   
 <br>
   
 ```{r, fig.width = 9, fig.height = 6}
-source('r-scripts/catch_trials.R')
+source('r-scripts/exp-1a/catch_trials.R')
 plt_catch
 ```
 
