@@ -1,0 +1,27 @@
+# **Risk Preference Trials**
+
+<!-- Risky Trial Plots -->
+
+<details>
+  <summary>
+  Plot
+  </summary>
+  
+<br>
+  
+```{r, fig.width = 12, fig.height = 6}
+source('r-scripts/exp-1b/risky_trials_plots.R')
+plt_risky_std_blks
+```
+
+Errorbars = 95% CI
+
+<br>
+
+Blocks 1 - 4 Results
+```{r}
+kable(risky_sum_stats, 'html', digits = 3) %>%
+  kable_classic(full_width = T, position = "center", html_font = "Arial")
+```
+
+</details> 

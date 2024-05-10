@@ -49,10 +49,16 @@ opts_chunk$set(
 )
 ```
 
-# EXPERIMENT 1A
+<font size = 20>
+<center>
+<b>
+Experiment 1a
+</b>
+</center>
+</font>
 
 <!-- Participant Information -->
-```{r child = 'markdown/subject_info.Rmd'}
+```{r child = 'markdown/exp-1a/subject_info.Rmd'}
 ```
 
 <br>
@@ -62,7 +68,7 @@ opts_chunk$set(
 <br>
 
 <!-- Catch Trials -->
-```{r child = 'markdown/catch_trials.Rmd'}
+```{r child = 'markdown/exp-1a/catch_trials.Rmd'}
 ```
 
 <br>
@@ -72,7 +78,46 @@ opts_chunk$set(
 <br>
 
 <!-- Risk Pref Trials -->
-```{r child = 'markdown/risky_trials.Rmd'}
+```{r child = 'markdown/exp-1a/risky_trials.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
+<font size = 20>
+<center>
+<b>
+Experiment 1b
+</b>
+</center>
+</font>
+
+<!-- Participant Information -->
+```{r child = 'markdown/exp-1b/subject_info.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
+
+<!-- Catch Trials -->
+```{r child = 'markdown/exp-1b/catch_trials.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
+<!-- Risk Pref Trials -->
+```{r child = 'markdown/exp-1b/risky_trials.Rmd'}
 ```
 
 <br>

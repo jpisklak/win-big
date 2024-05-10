@@ -52,12 +52,12 @@ plt_catch <- ggplot(ctch_res, aes(x = block, y = cp, group = group)) +
   theme(legend.position.inside = c(0.7, 0.4))
 
 #Save Plot  
-ggsave('plots/catch_results.png',
+ggsave('plots/exp-1a/catch_results.png',
        plot = plt_catch,
        units = 'in', width = 16, height = 9, 
        dpi = 500)
 
-ggsave('plots/catch_results.svg',
+ggsave('plots/exp-1a/catch_results.svg',
        plot = plt_catch,
        units = 'in', width = 16, height = 9)
     

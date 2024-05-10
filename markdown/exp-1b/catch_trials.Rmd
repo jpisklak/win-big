@@ -1,0 +1,19 @@
+# **Catch Trials**
+
+<!-- Catch Trial Plots -->
+
+<details>
+  <summary>
+  Plot
+  </summary>
+  
+<br>
+  
+```{r, fig.width = 7, fig.height = 5}
+source('r-scripts/exp-1b/catch_trials.R')
+plt_catch
+```
+
+Errorbars = 95% CI
+
+</details> 

@@ -95,13 +95,13 @@ plt_risky_std_blks <- ggplot(risky_res, aes(
   annotate("segment", x = -Inf, xend = -Inf, y = -Inf, yend = Inf, linewidth = 1) 
 
 # Save Plot
-ggsave("plots/plt_risky_std_blks.png",
+ggsave("plots/exp-1a/plt_risky_std_blks.png",
   plot = plt_risky_std_blks,
   units = "in", width = 16, height = 7,
   dpi = 500
 )
 
-ggsave("plots/plt_risky_std_blks.svg",
+ggsave("plots/exp-1a/plt_risky_std_blks.svg",
   plot = plt_risky_std_blks,
   units = "in", width = 16, height = 7
 )
