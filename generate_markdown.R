@@ -7,6 +7,6 @@ output_dir <- main_dir
 rmarkdown::render(
   input = file.path(source_dir, "results.Rmd"),
   output_format = "html_document",
-  output_file = paste0("results-", Sys.Date(), ".html"),
+  output_file = paste0("win-big-results-", Sys.Date(), ".html"),
   output_dir = output_dir
 )

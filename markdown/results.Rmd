@@ -1,6 +1,6 @@
 ---
 title: "Win Big Results"
-author: "Jeffrey M. Pisklak"
+# author: "Jeffrey M. Pisklak"
 date: "`r Sys.Date()`"
 output: html_document
 bibliography: references.bib
