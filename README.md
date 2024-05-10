@@ -2,9 +2,7 @@
 
 This repo contains all of the data and R code used for the "Win Big" HF study. 
 
-To view the analysis summary, just download `results-2024-05-05.html` and open it in your computer's web browser.
-
-**Note: Only summary stat info for the Exp 1a participants is complete so far.**
+To view the analysis summary, just download `results-2024-05-10.html` and open it in your computer's web browser.
 
 ---
 
