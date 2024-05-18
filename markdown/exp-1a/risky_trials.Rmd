@@ -36,6 +36,8 @@ source('r-scripts/exp-1a/risky_trials_summary.R')
 ```
 
 <h3> ANOVA Table </h3>
+
+- Note: Blocks 2 and 5 were excluded from the analysis as their comparisons were deemed irrelevant.
   
 ```{r}
 kable(risky_main, 'html', digits = 3) %>%
