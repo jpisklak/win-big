@@ -51,22 +51,22 @@ risky_part$choice_value <- factor(risky_part$choice_value,
 
 
 # Group Comparisons
-g1g2_vs_g3 <- c(1, 1, -2)
-g1_vs_g2 <- c(1, -1, 0)
-contrasts(risky_part$group) <- cbind(g1g2_vs_g3, g1_vs_g2)
+` g1_vs_g3 ` <- c(1, 0, 0)
+` g2_vs_g3 ` <- c(0, 1, 0)
+contrasts(risky_part$group) <- cbind(` g1_vs_g3 `, ` g2_vs_g3 `)
 
 # Choice Value Comparisons
-high_vs_low <- c(1, -1)
-contrasts(risky_part$choice_value) <- high_vs_low
+` high_vs_low ` <- c(1, -1)
+contrasts(risky_part$choice_value) <- ` high_vs_low `
 
 # Block Comparisons
-b1b3_vs_b4b6 <- c(1, 1, -1, -1)
-b1_vs_b3 <- c(1, -1, 0, 0)
-b4_vs_b6 <- c(0, 0, 1, -1)
+` b1b3_vs_b4b6 ` <- c(1, 1, -1, -1)
+` b1_vs_b3 ` <- c(1, -1, 0, 0)
+` b4_vs_b6 ` <- c(0, 0, 1, -1)
 contrasts(risky_part$block) <- cbind(
-  b1b3_vs_b4b6,
-  b1_vs_b3,
-  b4_vs_b6
+  ` b1b3_vs_b4b6 `,
+  ` b1_vs_b3 `,
+  ` b4_vs_b6 `
 )
 
 # Conventional ANOVA

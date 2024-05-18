@@ -49,5 +49,43 @@ bfs <-
   )
 
 
-#risky_main
-#summary(grp_val_blk)
+# Planned Comparisons
+# -----------------------------------------------------------------------------
+risky_pc <- data.frame(summary(grp_val_blk)$tTable)
+risky_pc$sig <- ifelse(risky_pc$p.value < .05, TRUE, FALSE)
+risky_pc$r_effect <- sqrt((risky_pc$t.value^2) /
+  (risky_pc$t.value^2 + risky_pc$DF))
+
+risky_pc$row <- 1:nrow(risky_pc)
+
+# beta
+pc_b_val <- round(risky_pc$Value, 2)
+
+# Degrees of freedom
+pc_t_df <- risky_pc$DF
+
+# T-stat
+pc_t_stat <- round(risky_pc$t.value, 2)
+
+# p-val
+pc_p_val <- ifelse(risky_pc$p.value < .001, '< .001', 
+                   round(risky_pc$p.value, 3))
+
+# r
+pc_r_val <- round(risky_pc$r_effect, 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

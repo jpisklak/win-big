@@ -22,11 +22,11 @@ Errorbars = 95% CI
 
 </details> 
 
-<!-- Risky Trial Main Effects -->
+<!-- Main Effects -->
 
 <details>
   <summary>
-  Risky Trial Main Effects
+  Main Effects
   </summary>
   
 <br>
@@ -72,32 +72,99 @@ $\chi^2(`r df_diffs[7]`) = `r l_rats[7]`, p `r p_vals[7]`, R^2_N = `r r_sqs[7]`,
 
 $\chi^2(`r df_diffs[8]`) = `r l_rats[8]`, p `r p_vals[8]`, R^2_N = `r r_sqs[8]`, BF_{10} `r bfs[8]`$
 
+<br>
+
+<h4>
+Conclusion:
+</h4>
+
+There is a 3-way interaction between Group, Value, and Block.
+
+<br>
 
 </details> 
 
 
-<!-- Risky Trial Main Effects -->
+<!-- Relevant Planned Comparisons -->
 
 <details>
   <summary>
-  Planned Comparisons
+  Relevant Planned Comparisons
+  </summary>
+
+<h3>
+**Comparing Blocks 1 and 3:**
+</h3>
+
+<h4>
+Block (1 vs 3) $\times$ Group (1 vs 3) $\times$ Value (High vs Low):
+</h4>
+
+$b = `r pc_b_val[21]`, t(`r pc_t_df[21]`) = `r pc_t_stat[21]`, p = `r pc_p_val[21]`, r = `r pc_r_val[21]`$
+
+<br>
+
+<h4>
+Block (1 vs 3) $\times$ Group (2 vs 3) $\times$ Value (High vs Low):
+</h4>
+
+$b = `r pc_b_val[22]`, t(`r pc_t_df[22]`) = `r pc_t_stat[22]`, p = `r pc_p_val[22]`, r = `r pc_r_val[22]`$
+
+<br>
+
+<h4>
+Conclusion:
+</h4>
+
+The difference between block 1 and 3 significantly interacts with both group and value.
+
+<br>
+
+<h3>
+**Comparing Blocks 4 and 6:**
+</h3>
+
+<h4>
+Block (4 vs 6) $\times$ Group (1 vs 3) $\times$ Value (High vs Low):
+</h4>
+
+$b = `r pc_b_val[23]`, t(`r pc_t_df[23]`) = `r pc_t_stat[23]`, p = `r pc_p_val[23]`, r = `r pc_r_val[23]`$
+
+<br>
+
+<h4>
+Block (4 vs 6) $\times$ Group (2 vs 3) $\times$ Value (High vs Low):
+</h4>
+
+$b = `r pc_b_val[24]`, t(`r pc_t_df[24]`) = `r pc_t_stat[24]`, p = `r pc_p_val[24]`, r = `r pc_r_val[24]`$
+
+<br>
+
+<h4>
+Conclusion:
+</h4>
+
+The difference between block 4 and 6 significantly interacts with group and value, but only when comparing group 1 and 3 (effect is small). There is no difference comparing group 2 and 3.
+
+<br>
+
+</details> 
+
+
+<!-- Planned Comparisons Full List -->
+
+<details>
+  <summary>
+  Planned Comparisons (full list)
   </summary>
 
 <br>
 
+```{r}
+kable(risky_pc, 'html', digits = 3) %>%
+  kable_classic(full_width = T, position = "center", html_font = "Arial")
+```
 
-
-
-
-
-
-
-
-
-
-
-
-  
 <br>
 
 </details> 
