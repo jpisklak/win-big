@@ -87,11 +87,11 @@ There is a 3-way interaction between Group, Value, and Block.
 </details> 
 
 
-<!-- Relevant Planned Comparisons -->
+<!-- Relevant Planned Contrasts -->
 
 <details>
   <summary>
-  Relevant Planned Comparisons
+  Relevant Planned Contrasts
   </summary>
 
 <h3>
@@ -153,11 +153,11 @@ The difference between block 4 and 6 significantly interacts with group and valu
 </details> 
 
 
-<!-- Planned Comparisons Full List -->
+<!-- Planned Contrasts Full List -->
 
 <details>
   <summary>
-  Planned Comparisons (full list)
+  Planned Contrasts (full list)
   </summary>
 
 <br>
