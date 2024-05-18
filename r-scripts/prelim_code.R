@@ -2,7 +2,9 @@
 pkgs <- c(
   "tidyverse",
   "patchwork",
-  "RColorBrewer"
+  "RColorBrewer",
+  "nlme",
+  "rcompanion"
 )
 
 installed_pkgs <- pkgs %in% rownames(installed.packages())

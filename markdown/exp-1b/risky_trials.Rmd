@@ -1,4 +1,4 @@
-# **Risk Preference Trials**
+## **Risk Preference Trials**
 
 <!-- Risky Trial Plots -->
 

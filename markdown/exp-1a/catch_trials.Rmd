@@ -1,4 +1,4 @@
-# **Catch Trials**
+## **Catch Trials**
 
 <!-- Catch Trial Plots -->
 
