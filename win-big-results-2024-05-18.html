@@ -1742,13 +1742,13 @@ font-size: 0.95em;
 details > summary {
 padding: 4px;
 cursor: pointer;
-font-size: 2em;
+font-size: 1.5em;
 }
-h1{
-text-align: center;
-font-size: 20;
-font-weight: bold
-}
+h1.title{font-weight: bold; font-size: 3em}
+h1{text-align: left; font-weight: bold; font-size: 2.5em}
+h2{text-align: left; font-weight: bold; font-size: 2em}
+h3{text-align: left; font-size: 2em}
+h4{text-align: left; font-size: 1.5em}
 </style>
 <div id="experiment-1a" class="section level1">
 <h1>Experiment 1a</h1>
@@ -2237,9 +2237,9 @@ Plot
 Main Effects
 </summary>
 <p><br></p>
-<h3>
+<h4>
 ANOVA Table
-</h3>
+</h4>
 <ul>
 <li>Note: Blocks 2 and 5 were excluded from the analysis as their
 comparisons were deemed unnecessary.</li>
@@ -2563,9 +2563,6 @@ grp_val_blk
 </tr>
 </tbody>
 </table>
-<h3>
-Conclusions
-</h3>
 <p><strong>Main Effect of Group:</strong></p>
 <p><span class="math inline">\(\chi^2(2) = 5.3, p = 0.071, R^2_N = 0.01,
 BF_{10} &lt; .01\)</span></p>
@@ -2600,22 +2597,19 @@ Conclusion:
 <summary>
 Relevant Planned Contrasts
 </summary>
-<h3>
+<h4>
 <strong>Comparing Blocks 1 and 3:</strong>
-</h3>
-<h4>
-Block (1 vs 3) <span class="math inline">\(\times\)</span> Group (1 vs
-3) <span class="math inline">\(\times\)</span> Value (High vs Low):
 </h4>
-<p><span class="math inline">\(b = 0.12, t(1086) = 6.45, p = &lt; .001,
+<p>Block (1 vs 3) <span class="math inline">\(\times\)</span> Group (1
+vs 3) <span class="math inline">\(\times\)</span> Value (High vs
+Low):</p>
+<p><span class="math inline">\(b = 0.12, t(1086) = 6.45, p &lt; .001, r
+= 0.19\)</span></p>
+<p>Block (1 vs 3) <span class="math inline">\(\times\)</span> Group (2
+vs 3) <span class="math inline">\(\times\)</span> Value (High vs
+Low):</p>
+<p><span class="math inline">\(b = -0.12, t(1086) = -6.35, p &lt; .001,
 r = 0.19\)</span></p>
-<p><br></p>
-<h4>
-Block (1 vs 3) <span class="math inline">\(\times\)</span> Group (2 vs
-3) <span class="math inline">\(\times\)</span> Value (High vs Low):
-</h4>
-<p><span class="math inline">\(b = -0.12, t(1086) = -6.35, p = &lt;
-.001, r = 0.19\)</span></p>
 <p><br></p>
 <h4>
 Conclusion:
@@ -2623,20 +2617,17 @@ Conclusion:
 <p>The difference between block 1 and 3 significantly interacts with
 both group and value.</p>
 <p><br></p>
-<h3>
-<strong>Comparing Blocks 4 and 6:</strong>
-</h3>
 <h4>
-Block (4 vs 6) <span class="math inline">\(\times\)</span> Group (1 vs
-3) <span class="math inline">\(\times\)</span> Value (High vs Low):
+<strong>Comparing Blocks 4 and 6:</strong>
 </h4>
+<p>Block (4 vs 6) <span class="math inline">\(\times\)</span> Group (1
+vs 3) <span class="math inline">\(\times\)</span> Value (High vs
+Low):</p>
 <p><span class="math inline">\(b = -0.04, t(1086) = -2, p = 0.046, r =
 0.06\)</span></p>
-<p><br></p>
-<h4>
-Block (4 vs 6) <span class="math inline">\(\times\)</span> Group (2 vs
-3) <span class="math inline">\(\times\)</span> Value (High vs Low):
-</h4>
+<p>Block (4 vs 6) <span class="math inline">\(\times\)</span> Group (2
+vs 3) <span class="math inline">\(\times\)</span> Value (High vs
+Low):</p>
 <p><span class="math inline">\(b = 0.01, t(1086) = 0.48, p = 0.631, r =
 0.01\)</span></p>
 <p><br></p>
