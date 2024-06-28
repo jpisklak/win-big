@@ -1,11 +1,25 @@
-# win-big
+# README: win-big
 
-This repo contains all of the data and R code used for the "Win Big" HF study. 
+## Overview
 
-To view the analysis summary, just download `results-2024-05-10.html` and open it in your computer's web browser.
+This repository contains all the data and R code used for the analyses in the *win-big study* and generates an HTML document of the results.
 
----
+To view the results document, download `win-big-results--xxxx-xx-xx.html` and open it in your web browser.
 
-If you want to download the whole repo, the file `generate_markdown.R` will generate a new results summary html file.
+## Contents
 
----
+The directory, file, and variable names within this repository are designed to be self-explanatory.
+
+- `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document.
+
+- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp_1a_data_filter.R` and `./r-scripts/exp_1b_data_filter.R` 
+
+- `./data/raw-data`: Contains all the raw data merged from the e-prime files.
+
+  - `wc_full_data.csv`: All the merged Pavlovia and Prolific files with improved column names, including incomplete and aborted data.
+
+- `./r-scripts`: Contains scripts for specific tasks such as merging raw data files, plotting risky choice results, etc. These files are sourced in the markdown generation. To run one of these scripts independently, adjust the working directory to `./win-big` and run the dependencies listed in the script.
+
+- `./plots`: Stores all generated plots in both .png and .svg formats.
+
+- `./markdown`: Contains the R markdown files used to generate the HTML results document.
