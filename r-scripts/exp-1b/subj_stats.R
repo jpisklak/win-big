@@ -1,5 +1,5 @@
 # setwd('../..') #Running this code in isolation requires being in the main dir.
-source("r-scripts/prelim_code.R")
+# source("r-scripts/prelim_code.R")
 
 # Load data
 data_1b <- read_csv("data/exp_1b_choice_complete.csv")

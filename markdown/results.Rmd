@@ -9,8 +9,8 @@ output:
     toc_float:
       collapsed: false
       smooth_scroll: false
-bibliography: references.bib
-csl: apa-with-abstract.csl
+bibliography: bibTex/refs.bib
+csl: bibTex/apa-with-abstract.csl
 
 nocite: |
   @R
@@ -25,10 +25,11 @@ details > summary {
 }
 
 h1.title{font-weight: bold; font-size: 3em}
-h1{text-align: left; font-weight: bold; font-size: 2.5em}
-h2{text-align: left; font-weight: bold; font-size: 2em}
+h1{text-align: left; font-size: 2.5em}
+h2{text-align: left; font-size: 2em}
 h3{text-align: left; font-size: 2em}
 h4{text-align: left; font-size: 1.5em}
+h5{text-align: left; font-size: 1.25em}
 
 </style>
 
@@ -62,7 +63,50 @@ opts_chunk$set(
 )
 ```
 
-# Experiment 1a
+# **Experiment 1a**
+
+<!-- Contingencies -->
+
+<details>
+  <summary>
+  Contingencies
+  </summary>
+  
+<br>
+
+<h5>Low Value Options</h5>
+- Fixed: 20 (Door 3)
+- Risky: 0 or 40 (Door 4)
+
+<h5>High Value Options</h5>
+- Fixed: 60 (Door 1)
+- Risky: 40 or 80 (Door 2)
+
+<h5>Trials</h5>
+- Six blocks of 80 trials.
+- *Decision Trials*: (fixed low vs risky low) & (fixed high vs risky high) - 24 per block (12 low, 12 high)
+- *Single door trials*: one door to click - 40 per block
+- *Catch trials*: high vs low - 16 per block
+
+<h5>Group 1</h5>
+- Block 1: 80% extreme values (0 low, 80 high)
+- Block 2: 50% extreme values.
+- Block 3: 20% extreme values (0 low, 80 high)
+- Block 4-6: Block 2: 50% extreme values.
+
+<h5>Group 2</h5>
+- Block 1: 20% extreme values (0 low, 80 high)
+- Block 2: 50% extreme values.
+- Block 3: 80% extreme values (0 low, 80 high)
+- Block 4-6: 50% extreme values.
+
+<h5>Group 3 (control)</h5> 
+- All blocks: 50% extreme values.
+
+<br>
+
+  </details>
+
 
 <!-- Participant Information -->
 ```{r child = 'markdown/exp-1a/subject_info.Rmd'}
@@ -94,7 +138,49 @@ opts_chunk$set(
 
 <br>
 
-# Experiment 1b
+# **Experiment 1b**
+
+<!-- Contingencies -->
+
+<details>
+  <summary>
+  Contingencies
+  </summary>
+  
+<br>
+
+<h5>Low Value Options</h5>
+- Fixed: 20 (Door 3)
+- Risky: 0 or 40 (Door 4)
+
+<h5>High Value Options</h5>
+- Fixed: 60 (Door 1)
+- Risky: 40 or 80 (Door 2)
+
+<h5>Trials</h5>
+- Six blocks of 80 trials.
+- Decision Trials: (fixed low vs risky low) & (fixed high vs risky high) - 24 per block (12 low, 12 high)
+- Single door trials: one door to click - 40 per block
+- Catch trials: high vs low - 16 per block
+
+<h5>Group 1</h5>
+- Block 1: 80% chance of best outcome on risky options.
+- Block 2: 50% of best outcome on risky options.
+- Block 3: 20% chance of best outcome on risky options.
+- Block 4-6: 50% of best outcome on risky options.
+
+<h5>Group 2</h5>
+- Block 1: 20% chance of best outcome on risky options.
+- Block 2: 50% of best outcome on risky options.
+- Block 3: 80% chance of best outcome on risky options.
+- Block 4-6: 50% of best outcome on risky options.
+
+<h5>Group 3 (control)</h5>
+- All blocks: 50% of best outcome on risky options.
+
+<br>
+
+</details>
 
 <!-- Participant Information -->
 ```{r child = 'markdown/exp-1b/subject_info.Rmd'}
@@ -126,4 +212,23 @@ opts_chunk$set(
 ---
 
 <br>
+
+# **R Citations**
+
+`r R.version$version.string`
+
+- nlme (`r packageVersion('nlme')`) [@nlme]
+- patchwork (`r packageVersion('patchwork')`) [@patchwork]
+- RColorBrewer (`r packageVersion('RColorBrewer')`) [@RColorBrewer]
+- rcompanion (`r packageVersion('rcompanion')`) [@rcompanion]
+- tidyverse (`r packageVersion('tidyverse')`) [@tidyverse]
+- WRS2 (`r packageVersion('WRS2')`) [@WRS2]
+
+<br>
+
+---
+
+<br>
+
+# **References**
 

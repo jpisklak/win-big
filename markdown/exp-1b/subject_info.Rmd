@@ -18,6 +18,8 @@ kable(pre_catch, 'html', digits = 3) %>%
   kable_classic(full_width = T, position = "center", html_font = "Arial")
 ```
 
+<br>
+
 </details> 
 
 <!-- Post-catch Exclusion -->

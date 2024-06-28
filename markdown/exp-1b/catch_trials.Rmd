@@ -4,16 +4,14 @@
 
 <details>
   <summary>
-  Plot
+  Plot - Block means with 95% CIs
   </summary>
   
 <br>
   
-```{r, fig.width = 7, fig.height = 5}
+```{r, fig.width = 10, fig.height = 7}
 source('r-scripts/exp-1b/catch_trials.R')
 plt_catch
 ```
-
-Errorbars = 95% CI
 
 </details> 

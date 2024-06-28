@@ -8,7 +8,7 @@ source('r-scripts/exp-1a/risky_trials_filter.R')
 
 <details>
   <summary>
-  Plot
+  Plot - Block means with 95% CIs
   </summary>
   
 <br>
@@ -17,8 +17,6 @@ source('r-scripts/exp-1a/risky_trials_filter.R')
 source('r-scripts/exp-1a/risky_trials_plots.R')
 plt_risky_std_blks
 ```
-
-Errorbars = 95% CI
 
 </details> 
 
@@ -37,7 +35,7 @@ source('r-scripts/exp-1a/risky_trials_summary.R')
 
 <h4> ANOVA Table </h4>
 
-- Note: Blocks 2 and 5 were excluded from the analysis as their comparisons were deemed unnecessary.
+- Note: All blocks (1 - 6) were included.
   
 ```{r}
 kable(risky_main, 'html', digits = 3) %>%
@@ -46,112 +44,31 @@ kable(risky_main, 'html', digits = 3) %>%
 
 **Main Effect of Group:**
 
-$\chi^2(`r df_diffs[2]`) = `r l_rats[2]`, p = `r p_vals[2]`, R^2_N = `r r_sqs[2]`, BF_{10} `r bfs[2]`$
+$\chi^2(`r df_diffs[2]`) = `r l_rats[2]`, p = `r p_vals[2]`, BF_{10} `r bfs[2]`$
 
 **Main Effect of Choice Value (i.e., Extreme Outcome effect):**
 
-$\chi^2(`r df_diffs[3]`) = `r l_rats[3]`, p `r p_vals[3]`, R^2_N = `r r_sqs[3]`, BF_{10} `r bfs[3]`$
+$\chi^2(`r df_diffs[3]`) = `r l_rats[3]`, p `r p_vals[3]`, BF_{10} `r bfs[3]`$
 
 **Main Effect of Block:**
 
-$\chi^2(`r df_diffs[4]`) = `r l_rats[4]`, p = `r p_vals[4]`, R^2_N = `r r_sqs[4]`, BF_{10} `r bfs[4]`$
+$\chi^2(`r df_diffs[4]`) = `r l_rats[4]`, p = `r p_vals[4]`, BF_{10} `r bfs[4]`$
 
 **Interaction: Group $\times$ Value:**
 
-$\chi^2(`r df_diffs[5]`) = `r l_rats[5]`, p = `r p_vals[5]`, R^2_N = `r r_sqs[5]`, BF_{10} `r bfs[5]`$
+$\chi^2(`r df_diffs[5]`) = `r l_rats[5]`, p = `r p_vals[5]`, BF_{10} = `r bfs[5]`$
 
 **Interaction: Group $\times$ Block:**
 
-$\chi^2(`r df_diffs[6]`) = `r l_rats[6]`, p = `r p_vals[6]`, R^2_N = `r r_sqs[6]`, BF_{10} `r bfs[6]`$
+$\chi^2(`r df_diffs[6]`) = `r l_rats[6]`, p = `r p_vals[6]`, BF_{10} `r bfs[6]`$
 
 **Interaction: Value $\times$ Block:**
 
-$\chi^2(`r df_diffs[7]`) = `r l_rats[7]`, p `r p_vals[7]`, R^2_N = `r r_sqs[7]`, BF_{10} = `r bfs[7]`$
+$\chi^2(`r df_diffs[7]`) = `r l_rats[7]`, p `r p_vals[7]`, BF_{10} `r bfs[7]`$
 
 **Interaction: Group $\times$ Value $\times$ Block:**
 
-$\chi^2(`r df_diffs[8]`) = `r l_rats[8]`, p `r p_vals[8]`, R^2_N = `r r_sqs[8]`, BF_{10} `r bfs[8]`$
-
-<br>
-
-<h4>
-Conclusion:
-</h4>
-
-There is a 3-way interaction between Group, Value, and Block.
-
-<br>
-
-</details> 
-
-
-<!-- Relevant Planned Contrasts -->
-
-<details>
-  <summary>
-  Relevant Planned Contrasts
-  </summary>
-
-<h4>
-**Comparing Blocks 1 and 3:**
-</h4>
-
-Block (1 vs 3) $\times$ Group (1 vs 3) $\times$ Value (High vs Low): 
-
-$b = `r pc_b_val[21]`, t(`r pc_t_df[21]`) = `r pc_t_stat[21]`, p `r pc_p_val[21]`, r = `r pc_r_val[21]`$
-
-Block (1 vs 3) $\times$ Group (2 vs 3) $\times$ Value (High vs Low):
-
-$b = `r pc_b_val[22]`, t(`r pc_t_df[22]`) = `r pc_t_stat[22]`, p `r pc_p_val[22]`, r = `r pc_r_val[22]`$
-
-<br>
-
-<h4>
-Conclusion:
-</h4>
-
-The difference between block 1 and 3 significantly interacts with both group and value.
-
-<br>
-
-<h4>
-**Comparing Blocks 4 and 6:**
-</h4>
-
-Block (4 vs 6) $\times$ Group (1 vs 3) $\times$ Value (High vs Low):
-
-$b = `r pc_b_val[23]`, t(`r pc_t_df[23]`) = `r pc_t_stat[23]`, p = `r pc_p_val[23]`, r = `r pc_r_val[23]`$
-
-Block (4 vs 6) $\times$ Group (2 vs 3) $\times$ Value (High vs Low):
-
-$b = `r pc_b_val[24]`, t(`r pc_t_df[24]`) = `r pc_t_stat[24]`, p = `r pc_p_val[24]`, r = `r pc_r_val[24]`$
-
-<br>
-
-<h4>
-Conclusion:
-</h4>
-
-The difference between block 4 and 6 significantly interacts with group and value, but only when comparing group 1 and 3 (effect is small). There is no difference comparing group 2 and 3.
-
-<br>
-
-</details> 
-
-
-<!-- Planned Contrasts Full List -->
-
-<details>
-  <summary>
-  Planned Contrasts (full list)
-  </summary>
-
-<br>
-
-```{r}
-kable(risky_pc, 'html', digits = 3) %>%
-  kable_classic(full_width = T, position = "center", html_font = "Arial")
-```
+$\chi^2(`r df_diffs[8]`) = `r l_rats[8]`, p `r p_vals[8]`, BF_{10} `r bfs[8]`$
 
 <br>
 

@@ -1,8 +1,8 @@
 # setwd('../..') #Running this R script alone requires being in the main dir.
-# source("r-scripts/exp-1a/subj_stats.R")
-# source("r-scripts/exp-1a/risky_trials_filter.R")
-
-source("r-scripts/exp-1a/risky_trials_analysis.R")
+# source("r-scripts/prelim_code.R")
+# source("r-scripts/exp-1b/subj_stats.R")
+# source("r-scripts/exp-1b/risky_trials_filter.R")
+# source("r-scripts/exp-1b/risky_trials_analysis.R")
 
 # Main effects
 # -----------------------------------------------------------------------------
@@ -47,5 +47,18 @@ bfs <-
       round(risky_main$BF_10, 3)
     )
   )
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

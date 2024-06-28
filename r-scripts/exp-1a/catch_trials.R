@@ -54,11 +54,11 @@ plt_catch <- ggplot(ctch_res, aes(x = block, y = cp, group = group)) +
 #Save Plot  
 ggsave('plots/exp-1a/catch_results.png',
        plot = plt_catch,
-       units = 'in', width = 16, height = 9, 
+       units = 'in', width = 14, height = 9, 
        dpi = 500)
 
 ggsave('plots/exp-1a/catch_results.svg',
        plot = plt_catch,
-       units = 'in', width = 16, height = 9)
+       units = 'in', width = 14, height = 9)
     
     

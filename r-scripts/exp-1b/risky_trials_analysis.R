@@ -1,45 +1,13 @@
 # setwd('../..') #Running this R script alone requires being in the main dir.
-# source("r-scripts/exp-1a/subj_stats.R")
-# source("r-scripts/exp-1a/risky_trials_filter.R")
-
-# Experiment 1a
+# source("r-scripts/prelim_code.R")
+# source("r-scripts/exp-1b/subj_stats.R")
+# source("r-scripts/exp-1b/risky_trials_filter.R")
 #-------------------------------------------------------------------------------
 
-# Low Value Options
-# Fixed: 20 (Door 3)
-# Risky: 0 or 40 (Door 4)
+# risky_res
 
-# High Value Options
-# Fixed: 60 (Door 1)
-# Risky: 40 or 80 (Door 2)
-
-# Six blocks of 80 trials.
-# Decision Trials: (fixed low vs risky low) & (fixed high vs risky high) - 24 per block (12 low, 12 high)
-# Single door trials: one door to click - 40 per block
-# Catch trials: high vs low - 16 per block
-
-# Group 1: 
-# Block 1: 80% extreme values (0 low, 80 high)
-# Block 2: 50% extreme values.
-# Block 3: 20% extreme values (0 low, 80 high)
-# Block 4-6: Block 2: 50% extreme values.
-
-# Group 2: 
-# Block 1: 20% extreme values (0 low, 80 high)
-# Block 2: 50% extreme values.
-# Block 3: 80% extreme values (0 low, 80 high)
-# Block 4-6: Block 2: 50% extreme values.
-
-# Group 3 (control): 
-# All blocks: 50% extreme values.
-
-#-------------------------------------------------------------------------------
-
-# Factor Data
-risky_res$subject <- factor(risky_res$subject)
+#Factor Block
 risky_res$block <- factor(risky_res$block)
-risky_res$choice_value <- factor(risky_res$choice_value, 
-                                  levels = c('High', 'Low'))
 
 # Comparisons
 
