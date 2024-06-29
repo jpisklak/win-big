@@ -7,6 +7,10 @@
 data_1a <- read_csv("data/exp_1a_choice_complete.csv")
 data_1a_in <- read_csv("data/exp_1a_choice_incomplete.csv")
 
+# Rename group levels
+data_1a$group <- factor(data_1a$group)
+levels(data_1a$group) <- c("EX 80-20", "EX 20-80", "EX 50")
+
 # Collect catch trials
 ctch <- data_1a %>%
   filter(trial_type == "catch")

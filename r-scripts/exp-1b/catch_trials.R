@@ -4,11 +4,6 @@
 # source("r-scripts/exp-1b/subj_stats.R")
 #-------------------------------------------------------------------------------
 
-
-# Factor
-ctch_res$group <- factor(ctch_res$group)
-levels(ctch_res$group) <- c('Group 1', 'Group 2', 'Group 3')
-
 #Plot
 dodge <- position_dodge(.3)
 

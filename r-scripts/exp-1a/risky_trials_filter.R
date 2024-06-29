@@ -22,9 +22,6 @@ risky_res <- risky %>%
   )
 
 # Factor and rename conditions
-risky_res$group <- factor(risky_res$group)
-levels(risky_res$group) <- c('Group 1', 'Group 2', 'Group 3')
-# levels(risky_res$group) <- c('80-20', '20-80', '50')
 risky_res$choice_value <- factor(risky_res$choice_value,
   levels = c("Low", "High")
 )

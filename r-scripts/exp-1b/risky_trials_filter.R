@@ -24,9 +24,7 @@ risky_res <- risky %>%
     cp = mean(risky_resp)
   )
 
-# Factor and rename conditions
-risky_res$group <- factor(risky_res$group)
-levels(risky_res$group) <- c("Group 1", "Group 2", "Group 3")
+# Factor and reorder levels
 risky_res$choice_value <- factor(risky_res$choice_value,
   levels = c("Low", "High")
 )

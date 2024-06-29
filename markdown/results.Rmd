@@ -92,19 +92,19 @@ source("r-scripts/prelim_code.R")
 - *Single door trials*: one door to click - 40 per block
 - *Catch trials*: high vs low - 16 per block
 
-<h5>Group 1</h5>
+<h5>EX 80-20</h5>
 - Block 1: 80% extreme values (0 low, 80 high)
 - Block 2: 50% extreme values.
 - Block 3: 20% extreme values (0 low, 80 high)
 - Block 4-6: Block 2: 50% extreme values.
 
-<h5>Group 2</h5>
+<h5>EX 20-80</h5>
 - Block 1: 20% extreme values (0 low, 80 high)
 - Block 2: 50% extreme values.
 - Block 3: 80% extreme values (0 low, 80 high)
 - Block 4-6: 50% extreme values.
 
-<h5>Group 3 (control)</h5> 
+<h5>EX 50 (control)</h5> 
 - All blocks: 50% extreme values.
 
 <br>
@@ -167,19 +167,19 @@ source("r-scripts/prelim_code.R")
 - Single door trials: one door to click - 40 per block
 - Catch trials: high vs low - 16 per block
 
-<h5>Group 1</h5>
+<h5>BEST 80-20</h5>
 - Block 1: 80% chance of best outcome on risky options.
 - Block 2: 50% of best outcome on risky options.
 - Block 3: 20% chance of best outcome on risky options.
 - Block 4-6: 50% of best outcome on risky options.
 
-<h5>Group 2</h5>
+<h5>BEST 20-80</h5>
 - Block 1: 20% chance of best outcome on risky options.
 - Block 2: 50% of best outcome on risky options.
 - Block 3: 80% chance of best outcome on risky options.
 - Block 4-6: 50% of best outcome on risky options.
 
-<h5>Group 3 (control)</h5>
+<h5>BEST 50 (control)</h5>
 - All blocks: 50% of best outcome on risky options.
 
 <br>

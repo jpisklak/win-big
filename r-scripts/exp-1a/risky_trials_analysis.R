@@ -42,8 +42,6 @@
 # Factor Data
 risky_res$subject <- factor(risky_res$subject)
 risky_res$block <- factor(risky_res$block)
-risky_res$choice_value <- factor(risky_res$choice_value, 
-                                  levels = c('High', 'Low'))
 
 # Comparisons
 

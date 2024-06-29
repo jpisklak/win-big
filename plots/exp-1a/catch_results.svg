@@ -136,18 +136,18 @@
 <text x='938.45' y='593.92' text-anchor='middle' style='font-size: 32.00px; font-family: "Arial";' textLength='17.80px' lengthAdjust='spacingAndGlyphs'>6</text>
 <text x='552.48' y='638.73' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='88.03px' lengthAdjust='spacingAndGlyphs'>Block</text>
 <text transform='translate(35.05,285.78) rotate(-90)' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='217.45px' lengthAdjust='spacingAndGlyphs'>p(High Value)</text>
-<rect x='656.05' y='278.13' width='152.89' height='127.42' style='stroke-width: 0.75; stroke: #FFFFFF; fill: #FFFFFF;' />
-<rect x='661.53' y='315.03' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<line x1='665.78' y1='329.20' x2='699.80' y2='329.20' style='stroke-width: 4.27; stroke: #1B9E77; stroke-linecap: butt;' />
-<circle cx='682.79' cy='329.20' r='8.89' style='stroke-width: 2.83; fill: #1B9E77;' />
-<rect x='661.53' y='343.38' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<line x1='665.78' y1='357.55' x2='699.80' y2='357.55' style='stroke-width: 4.27; stroke: #D95F02; stroke-linecap: butt;' />
-<rect x='674.91' y='349.67' width='15.75' height='15.75' style='stroke-width: 2.83; fill: #D95F02;' />
-<rect x='661.53' y='371.72' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<line x1='665.78' y1='385.90' x2='699.80' y2='385.90' style='stroke-width: 4.27; stroke: #7570B3; stroke-linecap: butt;' />
-<polygon points='682.79,397.03 693.93,385.90 682.79,374.76 671.65,385.90 ' style='stroke-width: 2.83; fill: #7570B3;' />
-<text x='709.53' y='338.51' style='font-size: 26.00px; font-family: "Arial";' textLength='93.93px' lengthAdjust='spacingAndGlyphs'>Group 1</text>
-<text x='709.53' y='366.86' style='font-size: 26.00px; font-family: "Arial";' textLength='93.93px' lengthAdjust='spacingAndGlyphs'>Group 2</text>
-<text x='709.53' y='395.20' style='font-size: 26.00px; font-family: "Arial";' textLength='93.93px' lengthAdjust='spacingAndGlyphs'>Group 3</text>
+<rect x='648.82' y='278.13' width='167.35' height='127.42' style='stroke-width: 0.75; stroke: #FFFFFF; fill: #FFFFFF;' />
+<rect x='654.30' y='315.03' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='658.55' y1='329.20' x2='692.56' y2='329.20' style='stroke-width: 4.27; stroke: #1B9E77; stroke-linecap: butt;' />
+<circle cx='675.56' cy='329.20' r='8.89' style='stroke-width: 2.83; fill: #1B9E77;' />
+<rect x='654.30' y='343.38' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='658.55' y1='357.55' x2='692.56' y2='357.55' style='stroke-width: 4.27; stroke: #D95F02; stroke-linecap: butt;' />
+<rect x='667.68' y='349.67' width='15.75' height='15.75' style='stroke-width: 2.83; fill: #D95F02;' />
+<rect x='654.30' y='371.72' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='658.55' y1='385.90' x2='692.56' y2='385.90' style='stroke-width: 4.27; stroke: #7570B3; stroke-linecap: butt;' />
+<polygon points='675.56,397.03 686.69,385.90 675.56,374.76 664.42,385.90 ' style='stroke-width: 2.83; fill: #7570B3;' />
+<text x='702.30' y='338.51' style='font-size: 26.00px; font-family: "Arial";' textLength='108.40px' lengthAdjust='spacingAndGlyphs'>EX 80-20</text>
+<text x='702.30' y='366.86' style='font-size: 26.00px; font-family: "Arial";' textLength='108.40px' lengthAdjust='spacingAndGlyphs'>EX 20-80</text>
+<text x='702.30' y='395.20' style='font-size: 26.00px; font-family: "Arial";' textLength='70.83px' lengthAdjust='spacingAndGlyphs'>EX 50</text>
 </g>
 </svg>
