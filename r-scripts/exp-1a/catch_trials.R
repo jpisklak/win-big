@@ -1,6 +1,8 @@
-# setwd('../..') #Running this R script alone requires being in the main dir
+# Run the following 3 lines to execute this script independently
+# setwd('../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/prelim_code.R")
 # source("r-scripts/exp-1a/subj_stats.R")
+#-------------------------------------------------------------------------------
 
 # Factor
 ctch_res$group <- factor(ctch_res$group)

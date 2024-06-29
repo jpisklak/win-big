@@ -1,5 +1,7 @@
-#setwd('../..') #Running this code in isolation requires being in the Analysis dir.
-source("r-scripts/prelim_code.R")
+# Run the following 2 lines to execute this script independently
+# setwd('../..') # assumes working dir is ./r-scripts/exp-1a
+# source("r-scripts/prelim_code.R")
+#-------------------------------------------------------------------------------
 
 # Load data
 data_1a <- read_csv("data/exp_1a_choice_complete.csv")

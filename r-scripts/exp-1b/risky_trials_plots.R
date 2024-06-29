@@ -1,7 +1,7 @@
-# setwd('../..') #Running this R script alone requires being in the main dir.
+# Run the following 2 lines to execute this script independently
+# setwd('../..') # assumes working dir is ./r-scripts/exp-1b
 # source("r-scripts/exp-1b/subj_stats.R")
-
-
+#-------------------------------------------------------------------------------
 
 # Conventional EO Plot by Block
 #-------------------------------------------------------------------------------
@@ -65,3 +65,57 @@ ggsave("plots/exp-1b/plt_risky_std_blks.svg",
   units = "in", width = 16, height = 9
 )
 
+# Histogram of Responses
+#-------------------------------------------------------------------------------
+
+high_res <- risky_res %>%
+  filter(`choice_value` == 'High')
+
+sort(unique(high_res$cp))
+
+low_res <- risky_res %>%
+  filter(`choice_value` == 'Low')
+
+sort(unique(low_res$cp))
+
+high_hist <- ggplot(high_res, aes(x = cp)) +
+  geom_histogram(
+    colour = 'black',
+    fill = "#77dd77",
+    bins = 13
+    #binwidth = function(x) 2 * IQR(x) / (length(x)^(1/3))
+  ) +
+  scale_x_continuous(breaks = c(0, 0.5, 1)) +
+  facet_grid(group ~ block) + 
+  xlab("Choice Prop.") +
+  ylab("Count") +
+  ggtitle("High Value Choices") +
+  theme_bw() +
+  theme(
+    axis.text = element_text(colour = 'black', size = '12'),
+    axis.title = element_text(colour = 'black', size = '12'),
+    strip.text = element_text(colour = 'black', size = '12'),
+    plot.title = element_text(colour = 'black', size = '16'),
+    legend.position = 'none'
+  )
+
+low_hist <- ggplot(low_res, aes(x = cp)) +
+  geom_histogram(
+    fill = "#ff6961",
+    colour = 'black',
+    #binwidth = function(x) 2 * IQR(x) / (length(x)^(1/3))
+    bins = 13
+  ) +
+  scale_x_continuous(breaks = c(0, 0.5, 1)) +
+  facet_grid(group ~ block) + 
+  xlab("Choice Prop.") +
+  ylab("Count") +
+  ggtitle("Low Value Choices") +
+  theme_bw() +
+  theme(
+    axis.text = element_text(colour = 'black', size = '12'),
+    axis.title = element_text(colour = 'black', size = '12'),
+    strip.text = element_text(colour = 'black', size = '12'),
+    plot.title = element_text(colour = 'black', size = '16'),
+    legend.position = 'none'
+  )

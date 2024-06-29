@@ -1,4 +1,4 @@
-#setwd('../..') #Running this code in isolation requires being in the Analysis dir.
+#setwd('../..')
 source("r-scripts/prelim_code.R")
 
 # Experiment 1a

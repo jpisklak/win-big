@@ -1,8 +1,10 @@
-# setwd('../..') #Running this R script alone requires being in the main dir.
+# Run the following 4 lines to execute this script independently
+# setwd('../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/exp-1a/subj_stats.R")
 # source("r-scripts/exp-1a/risky_trials_filter.R")
+# source("r-scripts/exp-1a/risky_trials_analysis.R")
+#-------------------------------------------------------------------------------
 
-source("r-scripts/exp-1a/risky_trials_analysis.R")
 
 # Main effects
 # -----------------------------------------------------------------------------

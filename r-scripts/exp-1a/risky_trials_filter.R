@@ -1,5 +1,7 @@
-# setwd('../..') #Running this R script alone requires being in the main dir.
+# Run the following 2 lines to execute this script independently
+# setwd('../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/exp-1a/subj_stats.R")
+#-------------------------------------------------------------------------------
 
 risky <- data_1a %>% 
   filter(!(subject %in% exclude$subject), # remove catch exclusions
