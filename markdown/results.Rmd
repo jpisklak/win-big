@@ -25,11 +25,10 @@ details > summary {
 }
 
 h1.title{font-weight: bold; font-size: 3em}
-h1{text-align: left; font-size: 2.5em}
-h2{text-align: left; font-size: 2em}
+h1{text-align: left; font-weight: bold; font-size: 2.5em}
+h2{text-align: left; font-weight: bold; font-style: italic; font-size: 2em}
 h3{text-align: left; font-size: 2em}
 h4{text-align: left; font-size: 1.5em}
-h5{text-align: left; font-size: 1.25em}
 
 </style>
 
@@ -61,6 +60,11 @@ opts_chunk$set(
   message = FALSE,
   fig.width = 7, fig.height = 5
 )
+```
+
+```{r}
+# Dependencies
+source("r-scripts/prelim_code.R")
 ```
 
 # **Experiment 1a**

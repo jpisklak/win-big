@@ -1,4 +1,4 @@
-## **Risk Preference Trials**
+## Risk Preference Trials
 
 ```{r, fig.width = 12, fig.height = 6}
 source('r-scripts/exp-1a/risky_trials_filter.R')
@@ -13,9 +13,28 @@ source('r-scripts/exp-1a/risky_trials_filter.R')
   
 <br>
   
-```{r, fig.width = 12, fig.height = 6}
+```{r, fig.width = 14, fig.height = 8}
 source('r-scripts/exp-1a/risky_trials_plots.R')
 plt_risky_std_blks
+```
+
+</details>
+
+<details>
+  <summary>
+  Plot - Histogram of Responses (Group ~ Block)
+  </summary>
+  
+<br>
+  
+```{r, fig.width = 11, fig.height = 4.5}
+low_hist
+```
+
+<br>
+
+```{r, fig.width = 11, fig.height = 4.5}
+high_hist
 ```
 
 </details> 
@@ -29,7 +48,8 @@ plt_risky_std_blks
   
 <br>
 
-```{r, fig.width = 12, fig.height = 6}
+```{r}
+source("r-scripts/exp-1a/risky_trials_analysis.R")
 source('r-scripts/exp-1a/risky_trials_summary.R')
 ```
 

@@ -1,4 +1,4 @@
-## **Risk Preference Trials**
+## Risk Preference Trials
 
 <!-- Risky Trial Plots -->
 
@@ -19,6 +19,24 @@ plt_risky_std_blks
 
 </details>
 
+<details>
+  <summary>
+  Plot - Histogram of Responses (Group ~ Block)
+  </summary>
+  
+<br>
+  
+```{r, fig.width = 11, fig.height = 4.5}
+low_hist
+```
+
+<br>
+
+```{r, fig.width = 11, fig.height = 4.5}
+high_hist
+```
+
+</details> 
 
 <!-- Main Effects -->
 
