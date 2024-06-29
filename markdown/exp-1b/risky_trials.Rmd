@@ -1,5 +1,9 @@
 ## Risk Preference Trials
 
+```{r}
+source('r-scripts/exp-1b/risky_trials_filter.R')
+```
+
 <!-- Risky Trial Plots -->
 
 <details>
@@ -9,8 +13,7 @@
   
 <br>
   
-```{r, fig.width = 12, fig.height = 6}
-source('r-scripts/exp-1b/risky_trials_filter.R')
+```{r, fig.width = 14, fig.height = 8}
 source('r-scripts/exp-1b/risky_trials_plots.R')
 plt_risky_std_blks
 ```

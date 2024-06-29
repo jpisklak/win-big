@@ -1,6 +1,6 @@
 ## Risk Preference Trials
 
-```{r, fig.width = 12, fig.height = 6}
+```{r}
 source('r-scripts/exp-1a/risky_trials_filter.R')
 ```
 

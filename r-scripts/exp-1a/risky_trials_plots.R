@@ -52,7 +52,7 @@ plt_risky_std_blks <- ggplot(risky_res, aes(
        fill = "Choice Value:",
        colour = "Choice Value:") +
   theme_custom() +
-  theme(axis.text.x = element_text(size = 20),
+  theme(axis.text.x = element_text(size = 24),
         legend.position = 'bottom') +
   annotate("segment", x = -Inf, xend = -Inf, y = -Inf, yend = Inf, linewidth = 1) 
 
