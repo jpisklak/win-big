@@ -1,7 +1,7 @@
+# Run the following 5 lines to execute this script independently
 # setwd('../..') # assumes working dir is ./r-scripts/exp-1b
 # source("r-scripts/prelim_code.R")
 #-------------------------------------------------------------------------------
-
 
 # Load data
 data_1b <- read_csv("data/exp_1b_choice_complete.csv")
