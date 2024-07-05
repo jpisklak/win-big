@@ -10,7 +10,7 @@ theme_custom <- function () {
                                   angle = 90),
       axis.line = element_line(colour = 'black', linewidth = 1),
       panel.border=element_blank(),
-      strip.text=element_text(size = 36, colour = 'black',
+      strip.text=element_text(size = 32, colour = 'black',
                               margin = margin(1,0,1,0, "cm")),
       strip.background=element_rect(colour='white', 
                                     fill= 'white'),
