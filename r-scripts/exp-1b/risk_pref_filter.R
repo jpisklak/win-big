@@ -4,7 +4,6 @@
 # source("r-scripts/exp-1b/subj_stats.R")
 #-------------------------------------------------------------------------------
 
-
 risky <- data_1b %>%
   filter(
     !(subject %in% exclude$subject), # remove catch exclusions
