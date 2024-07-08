@@ -11,18 +11,6 @@
 # -----------------------------------------------------------------------------
 risky_main <- data.frame(risky_main)[, 2:ncol(risky_main)]
 
-# #Nagelkerke (Cragg and Uhler) Pseudo R-squared
-# risky_main$R2 <- c(
-#   NA,
-#   nagelkerke(grp_mod, null = base_mod)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(value_mod, null = grp_mod)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(blk_mod, null = grp_mod)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(grp_val, null = value_mod)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(grp_blk, null = grp_val)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(val_blk, null = grp_blk)$Pseudo.R.squared.for.model.vs.null[3],
-#   nagelkerke(grp_val_blk, null = val_blk)$Pseudo.R.squared.for.model.vs.null[3]
-# )
-
 # Inverse Bayes Factor
 delta_BIC <- risky_main$BIC[2:nrow(risky_main)] - 
   risky_main$BIC[1:(nrow(risky_main) - 1)]
