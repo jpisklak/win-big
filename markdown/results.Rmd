@@ -133,7 +133,7 @@ source("r-scripts/prelim_code.R")
 <br>
 
 <!-- Risk Pref Trials -->
-```{r child = 'markdown/exp-1a/risky_trials.Rmd'}
+```{r child = 'markdown/exp-1a/risk_pref.Rmd'}
 ```
 
 <br>
@@ -208,7 +208,7 @@ source("r-scripts/prelim_code.R")
 <br>
 
 <!-- Risk Pref Trials -->
-```{r child = 'markdown/exp-1b/risky_trials.Rmd'}
+```{r child = 'markdown/exp-1b/risk_pref.Rmd'}
 ```
 
 <br>

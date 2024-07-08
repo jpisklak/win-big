@@ -1,6 +1,6 @@
 ## Catch Trials
 
-<!-- Catch Trial Plots -->
+<!-- Catch Trial Plot -->
 
 <details>
   <summary>
@@ -10,7 +10,7 @@
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1a/catch_trials.R')
+source('r-scripts/exp-1a/catch_plot.R')
 include_graphics(
   file.path(main_dir, "plots/exp-1a/catch_results.svg")
 )

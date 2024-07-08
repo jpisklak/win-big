@@ -1,25 +1,33 @@
 ## Risk Preference Trials
 
 ```{r}
-source('r-scripts/exp-1b/risky_trials_filter.R')
+source('r-scripts/exp-1a/risk_pref_filter.R')
 ```
 
 <!-- Risky Trial Plots -->
 
 <details>
   <summary>
-    Plot - Block means with 95% CIs
+  Plot - Block means with 95% CIs
   </summary>
   
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1b/risky_trials_plots.R')
+source('r-scripts/exp-1a/risk_pref_plots.R')
 include_graphics(
-  file.path(main_dir,"plots/exp-1b/plt_risky_blk.svg")
+  file.path(main_dir,"plots/exp-1a/plt_risky_blk.svg")
 )
 ```
 
-<br>
-
 </details>
+
+
+
+
+
+
+
+
+
+

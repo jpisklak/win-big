@@ -1,0 +1,25 @@
+## Risk Preference Trials
+
+```{r}
+source('r-scripts/exp-1b/risk_pref_filter.R')
+```
+
+<!-- Risky Trial Plots -->
+
+<details>
+  <summary>
+    Plot - Block means with 95% CIs
+  </summary>
+  
+<br>
+  
+```{r, out.width = '100%', out.height = '100%'}
+source('r-scripts/exp-1b/risk_pref_plots.R')
+include_graphics(
+  file.path(main_dir,"plots/exp-1b/plt_risky_blk.svg")
+)
+```
+
+<br>
+
+</details>

@@ -2,8 +2,8 @@
 # setwd('../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/prelim_code.R")
 # source("r-scripts/exp-1a/subj_stats.R")
-# source("r-scripts/exp-1a/risky_trials_filter.R")
-# source("r-scripts/exp-1a/risky_trials_analysis.R")
+# source("r-scripts/exp-1a/risk_pref_filter.R")
+# source("r-scripts/exp-1a/risk_pref_analysis.R")
 #-------------------------------------------------------------------------------
 
 
