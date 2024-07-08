@@ -27,9 +27,6 @@ l_rats <- round(risky_main$L.Ratio, 2)
 p_vals <- ifelse(risky_main$p.value < .001, '< .001', 
                  round(risky_main$p.value, 3))
 
-# # r-squared
-# r_sqs <- round(risky_main$R2, 2)
-
 # Inverse Bayes Factor
 bfs <-
   ifelse(risky_main$BF_10 > 150, '> 150',
