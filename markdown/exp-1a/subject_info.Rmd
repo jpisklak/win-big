@@ -49,7 +49,7 @@ kable(cond_tot, "html", digits = 3) %>%
 
 - Total number of catch trial exclusions = `r catch_n`.
 
-- Catch trial exclusions were based on block 6 performance.
+- Catch trial exclusions were based on block 5 & 6 performance.
 
 </details> 
 

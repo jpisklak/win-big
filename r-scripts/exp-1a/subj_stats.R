@@ -8,8 +8,8 @@ data_1a <- read_csv("data/exp_1a_choice_complete.csv")
 data_1a_in <- read_csv("data/exp_1a_choice_incomplete.csv")
 
 # Rename group levels
-data_1a$group <- factor(data_1a$group)
-levels(data_1a$group) <- c("EX 80-20", "EX 20-80", "EX 50")
+data_1a$group <- factor(data_1a$group, levels = c(3, 1, 2))
+levels(data_1a$group) <- c("EX 50", "EX 80-20", "EX 20-80")
 
 # Collect catch trials
 ctch <- data_1a %>%
@@ -29,9 +29,13 @@ ctch_res <- ctch %>%
   summarise(cp = mean(corr_resp))
 
 # Catch Exclusions
-exclude <- filter(ctch_res, block == 6 & cp < 0.6)
+ex_res <- ctch %>%
+  filter(block >= 5) %>%
+  group_by(group, subject) %>%
+  summarise(cp = mean(corr_resp))
+
+exclude <- filter(ex_res, cp < 0.6)
 ctch_res <- filter(ctch_res, !(subject %in% exclude$subject))
-ctch_res
 
 # Get relevant info
 demo_info <- data_1a %>% 
