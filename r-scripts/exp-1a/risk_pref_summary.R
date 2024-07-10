@@ -35,3 +35,15 @@ bfs <-
       round(risky_main$BF_10, 3)
     )
   )
+
+# Planned Contrasts Results
+# -----------------------------------------------------------------------------
+pc <- as.data.frame(summary(grp_val)$tTable)
+pc$sig <- ifelse(pc$`p-value` < .05, TRUE, FALSE)
+pc$r_effect <- sqrt((pc$`t-value`^2) /
+  (pc$`t-value`^2 + pc$DF))
+
+
+
+
+
