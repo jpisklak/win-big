@@ -4,12 +4,11 @@
 #-------------------------------------------------------------------------------
 
 # Load data
-data_1a <- read_csv("data/exp_1a_choice_complete.csv")
-data_1a_in <- read_csv("data/exp_1a_choice_incomplete.csv")
+data_1a <- read_csv("data/exp_1a_data.csv")
 
-# Rename group levels
-data_1a$group <- factor(data_1a$group, levels = c(3, 1, 2))
-levels(data_1a$group) <- c("EX 50", "EX 80-20", "EX 20-80")
+data_1a$group <- factor(data_1a$group,
+  levels = c("EX 50", "EX 80-20", "EX 20-80")
+)
 
 # Collect catch trials
 ctch <- data_1a %>%
@@ -80,5 +79,4 @@ cond_tot <- demo_info_f %>%
     age_median = median(age, na.rm = TRUE),
     age_IQR = IQR(age, na.rm = TRUE)
   )
-
 

@@ -1,7 +1,7 @@
 ## Risk Preference Trials
 
 ```{r}
-source('r-scripts/exp-1a/risk_pref_filter.R')
+source('r-scripts/exp-1a/choice-trials/risk_pref_filter.R')
 ```
 
 <!-- Risky Trial Plots -->
@@ -14,7 +14,7 @@ source('r-scripts/exp-1a/risk_pref_filter.R')
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1a/risk_pref_plots.R')
+source('r-scripts/exp-1a/choice-trials/risk_pref_plots.R')
 include_graphics(
   file.path(main_dir,"plots/exp-1a/plt_risky_blk.svg")
 )
@@ -34,7 +34,6 @@ include_graphics(
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1a/risk_pref_plots.R')
 include_graphics(
   file.path(main_dir,"plots/exp-1a/plt_risky_int.svg")
 )
@@ -52,8 +51,8 @@ include_graphics(
 - Note: Analysis was conducted on the results of block 5 and 6. 
 
 ```{r}
-source("r-scripts/exp-1a/risk_pref_analysis.R")
-source('r-scripts/exp-1a/risk_pref_summary.R')
+source("r-scripts/exp-1a/choice-trials/risk_pref_analysis.R")
+source('r-scripts/exp-1a/choice-trials/risk_pref_summary.R')
 ```
 
 <h4> ANOVA Table </h4>

@@ -1,13 +1,13 @@
 # Install and Load Necessary Packages
 pkgs <- c(
-  "tidyverse",
-  "patchwork",
-  "ggh4x",
+  "nlme",
   "Hmisc",
   "rcompanion",
-  "nlme",
   "RColorBrewer",
-  "WRS2"
+  "WRS2",
+  "tidyverse",
+  "patchwork",
+  "ggh4x"
 )
 
 installed_pkgs <- pkgs %in% rownames(installed.packages())
