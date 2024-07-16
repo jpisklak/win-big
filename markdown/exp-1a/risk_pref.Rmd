@@ -29,8 +29,6 @@ include_graphics(
   Plot - Interaction plot with 95% CIs
   </summary>
 
-- Showing the combined effect of block 5 and 6.
-  
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
@@ -47,8 +45,6 @@ include_graphics(
   <summary>
   Main Effects
   </summary>
-  
-- Note: Analysis was conducted on the results of block 5 and 6. 
 
 ```{r}
 source("r-scripts/exp-1a/choice-trials/risk_pref_analysis.R")
@@ -82,8 +78,6 @@ $\chi^2(`r df_diffs[4]`) = `r l_rats[4]`, p = `r p_vals[4]`, BF_{10} `r bfs[4]`$
   <summary>
   Planned Comparisons
   </summary>
-  
-- Note: Analysis was conducted on the results of block 5 and 6. 
 
 <h4> ANOVA Table </h4>
 
@@ -126,6 +120,7 @@ $b = `r b_vals[6]`, t(`r df_vals[6]`) = `r t_stat[6]`, p = `r p_vals[6]`, r = `r
   Notes
   </summary>
 
+- All plots and analyses are showing the combined effect of block 5 and 6.
 - Bayes Factors are reported as Inverse Bayes Factors, this means larger values
 indicate greater support for the effect. Anything less than 1 should be considered as contributing no evidence.
 

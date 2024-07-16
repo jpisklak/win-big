@@ -41,6 +41,10 @@ fo <- fo %>%
     q_door_val %in% c("risky_high", "fixed_high") ~ "High"
   ))
 
+# Exclude fixed outcomes
+fo <- fo %>% 
+  filter(!(q_door_val %in% c("fixed_low", "fixed_high")))
+
 # Create category column for results
 fo <- fo %>%
   mutate(fo_cat = case_when(
