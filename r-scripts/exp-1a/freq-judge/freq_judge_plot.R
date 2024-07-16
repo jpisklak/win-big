@@ -54,13 +54,13 @@ plt_fj_means <- ggplot(fj_long,
   )
 
 # Save Plot
-ggsave("plots/freq-judge/plt_fj_means.png",
+ggsave("plots/exp-1a/plt_fj_means.png",
   plot = plt_fj_means,
   units = "in", width = 11, height = 8,
   dpi = 500
 )
 
-ggsave("plots/freq-judge/plt_fj_means.svg",
+ggsave("plots/exp-1a/plt_fj_means.svg",
   plot = plt_fj_means,
   units = "in", width = 11, height = 8
 )

@@ -1,0 +1,31 @@
+## First-Outcome Judgement
+
+<!-- Plot -->
+
+<details>
+  <summary>
+  Plot - Proportions
+  </summary>
+  
+<br>
+  
+```{r, out.width = '100%', out.height = '100%'}
+source('r-scripts/exp-1a/fo-recall/fo_recall_filter.R')
+source('r-scripts/exp-1a/fo-recall/fo_recall_plots.R')
+
+include_graphics(
+  file.path(main_dir,"plots/exp-1a/plt_fo_prop.svg")
+)
+```
+
+Note: 
+
+- Proportions are taken within condition and context (high/low). E.g., All the green bars in the top left sum to 1, all the orange bars in the top middle sum to 1, and so on. 
+- The colour palette is colourblind friendly.
+
+<br>
+
+</details>
+
+
+
