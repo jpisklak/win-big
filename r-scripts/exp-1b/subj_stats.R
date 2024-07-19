@@ -1,14 +1,14 @@
-# Run the following 5 lines to execute this script independently
+# Run the following 2 lines to execute this script independently
 # setwd('../..') # assumes working dir is ./r-scripts/exp-1b
 # source("r-scripts/prelim_code.R")
 #-------------------------------------------------------------------------------
 
 # Load data
-data_1b <- read_csv("data/exp_1b_choice_complete.csv")
+data_1b <- read_csv("data/exp_1b_data.csv")
 
-# Rename group levels
-data_1b$group <- factor(data_1b$group, levels = c(3, 1, 2))
-levels(data_1b$group) <- c("BEST 50", "BEST 80-20", "BEST 20-80")
+data_1b$group <- factor(data_1b$group,
+  levels = c("BEST 50", "BEST 80-20", "BEST 20-80")
+)
 
 # Collect catch trials
 ctch <- data_1b %>%
@@ -79,5 +79,4 @@ cond_tot <- demo_info_f %>%
     age_median = median(age, na.rm = TRUE),
     age_IQR = IQR(age, na.rm = TRUE)
   )
-
 

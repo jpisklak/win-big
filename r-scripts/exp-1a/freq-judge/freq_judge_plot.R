@@ -1,5 +1,5 @@
 # Run the following 4 lines to execute this script independently
-# setwd('../../..') # assumes working dir is ./r-scripts/freq-judge
+# setwd('../../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/prelim_code.R")
 # source("r-scripts/exp-1a/subj_stats.R")
 # source("r-scripts/exp-1a/freq-judge/freq_judge_filter.R")
@@ -54,13 +54,13 @@ plt_fj_means <- ggplot(fj_long,
   )
 
 # Save Plot
-ggsave("plots/exp-1a/plt_fj_means.png",
+ggsave("plots/exp-1a/freq-judge/plt_fj_means.png",
   plot = plt_fj_means,
   units = "in", width = 11, height = 8,
   dpi = 500
 )
 
-ggsave("plots/exp-1a/plt_fj_means.svg",
+ggsave("plots/exp-1a/freq-judge/plt_fj_means.svg",
   plot = plt_fj_means,
   units = "in", width = 11, height = 8
 )

@@ -14,7 +14,7 @@ source('r-scripts/exp-1a/fo-recall/fo_recall_filter.R')
 source('r-scripts/exp-1a/fo-recall/fo_recall_plots.R')
 
 include_graphics(
-  file.path(main_dir,"plots/exp-1a/plt_fo_prop.svg")
+  file.path(main_dir,"plots/exp-1a/fo-recall/plt_fo_prop.svg")
 )
 ```
 

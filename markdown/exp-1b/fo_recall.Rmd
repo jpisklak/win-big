@@ -1,0 +1,29 @@
+## First-Outcome Judgement
+
+<!-- Plot -->
+
+<details>
+  <summary>
+  Plot - Proportions
+  </summary>
+  
+<br>
+  
+```{r, out.width = '100%', out.height = '100%'}
+source('r-scripts/exp-1b/fo-recall/fo_recall_filter.R')
+source('r-scripts/exp-1b/fo-recall/fo_recall_plots.R')
+
+include_graphics(
+  file.path(main_dir,"plots/exp-1b/fo-recall/plt_fo_prop.svg")
+)
+```
+
+Note: 
+
+- Proportions are taken within condition and context (high/low). E.g., All the green bars in the top left sum to 1, all the orange bars in the top middle sum to 1, and so on. 
+- Since non-numeric responses were permissible by the experiment's program, data was filtered to remove all non-numeric inputs. If a participant's inputs had a cumulative sum less than 20 or greater than 300, their results were removed.  In total, `r nrow(nr)` participants met this criteria.
+
+<br>
+
+</details>
+

@@ -237,16 +237,36 @@ source("r-scripts/prelim_code.R")
 
 <br>
 
+<!-- First Outcome Judgement -->
+```{r child = 'markdown/exp-1b/fo_recall.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
+<!-- Frequency Judgement -->
+```{r child = 'markdown/exp-1b/freq_judge.Rmd'}
+```
+
+<br>
+
+---
+
+<br>
+
 # **R Citations**
 
 `r R.version$version.string`
 
+- ggh4x (`r packageVersion('ggh4x')`) [@ggh4x]
+- Hmisc (`r packageVersion('Hmisc')`) [@Hmisc]
 - nlme (`r packageVersion('nlme')`) [@nlme]
-- patchwork (`r packageVersion('patchwork')`) [@patchwork]
 - RColorBrewer (`r packageVersion('RColorBrewer')`) [@RColorBrewer]
 - rcompanion (`r packageVersion('rcompanion')`) [@rcompanion]
 - tidyverse (`r packageVersion('tidyverse')`) [@tidyverse]
-- WRS2 (`r packageVersion('WRS2')`) [@WRS2]
 
 <br>
 

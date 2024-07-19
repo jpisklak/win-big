@@ -1,7 +1,7 @@
 ## Risk Preference Trials
 
 ```{r}
-source('r-scripts/exp-1b/risk_pref_filter.R')
+source('r-scripts/exp-1b/choice-trials/risk_pref_filter.R')
 ```
 
 <!-- Risky Trial Plots -->
@@ -14,9 +14,9 @@ source('r-scripts/exp-1b/risk_pref_filter.R')
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1b/risk_pref_plots.R')
+source('r-scripts/exp-1b/choice-trials/risk_pref_plots.R')
 include_graphics(
-  file.path(main_dir,"plots/exp-1b/plt_risky_blk.svg")
+  file.path(main_dir,"plots/exp-1b/choice-trials/plt_risky_blk.svg")
 )
 ```
 
@@ -34,9 +34,8 @@ include_graphics(
 <br>
   
 ```{r, out.width = '100%', out.height = '100%'}
-source('r-scripts/exp-1b/risk_pref_plots.R')
 include_graphics(
-  file.path(main_dir,"plots/exp-1b/plt_risky_int.svg")
+  file.path(main_dir,"plots/exp-1b/choice-trials/plt_risky_int.svg")
 )
 ```
 
@@ -49,11 +48,9 @@ include_graphics(
   Main Effects
   </summary>
   
-- Note: Analysis was conducted on the results of block 5 and 6. 
-
 ```{r}
-source("r-scripts/exp-1b/risk_pref_analysis.R")
-source('r-scripts/exp-1b/risk_pref_summary.R')
+source("r-scripts/exp-1b/choice-trials/risk_pref_analysis.R")
+source('r-scripts/exp-1b/choice-trials/risk_pref_summary.R')
 ```
 
 <h4> ANOVA Table </h4>
@@ -86,8 +83,6 @@ $\chi^2(`r df_diffs[4]`) = `r l_rats[4]`, p = `r p_vals[4]`, BF_{10} = `r bfs[4]
   Planned Comparisons
   </summary>
   
-- Note: Analysis was conducted on the results of block 5 and 6. 
-
 <h4> ANOVA Table </h4>
 
 ```{r}
@@ -129,6 +124,7 @@ $b = `r b_vals[6]`, t(`r df_vals[6]`) = `r t_stat[6]`, p = `r p_vals[6]`, r = `r
   Notes
   </summary>
 
+- All plots and analyses are showing the combined effect of block 5 and 6.
 - Bayes Factors are reported as Inverse Bayes Factors, this means larger values
 indicate greater support for the effect. Anything less than 1 should be considered as contributing no evidence.
 

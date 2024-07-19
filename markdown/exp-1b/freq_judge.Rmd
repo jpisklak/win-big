@@ -1,0 +1,39 @@
+## Frequency Judgement
+
+<!-- Plot -->
+
+<details>
+  <summary>
+  Plot - Means and 95% CIs
+  </summary>
+  
+<br>
+  
+```{r, out.width = '100%', out.height = '100%'}
+source('r-scripts/exp-1b/freq-judge/freq_judge_filter.R')
+source('r-scripts/exp-1b/freq-judge/freq_judge_plot.R')
+
+include_graphics(
+  file.path(main_dir,"plots/exp-1b/freq-judge/plt_fj_means.svg")
+)
+```
+
+<br>
+
+</details>
+
+<details>
+  <summary>
+  Table - Plotting Values
+  </summary>
+  
+<br>
+
+```{r}
+kable(fj_bar_tab, 'html', digits = 3) %>%
+  kable_classic(full_width = T, position = "center", html_font = "Arial")
+```
+
+<br>
+
+</details>

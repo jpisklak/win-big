@@ -67,13 +67,13 @@ plt_risky_blk <- ggplot(risky_res, aes(
 
 
 # Save Plot
-ggsave("plots/exp-1a/plt_risky_blk.png",
+ggsave("plots/exp-1a/choice-trials/plt_risky_blk.png",
   plot = plt_risky_blk,
   units = "in", width = 11, height = 7,
   dpi = 500
 )
 
-ggsave("plots/exp-1a/plt_risky_blk.svg",
+ggsave("plots/exp-1a/choice-trials/plt_risky_blk.svg",
   plot = plt_risky_blk,
   units = "in", width = 11, height = 7
 )
@@ -139,6 +139,18 @@ aov_bar <- ggplot(aov_res, aes(x = group, y = cp)) +
     legend.key.spacing.x = unit(0.75, 'cm')
   )
 
+# Save Plot
+ggsave("plots/exp-1a/choice-trials/plt_risky_bar.png",
+       plot = aov_bar,
+       units = "in", width = 11, height = 7,
+       dpi = 500
+)
+
+ggsave("plots/exp-1a/choice-trials/plt_risky_bar.svg",
+       plot = aov_bar,
+       units = "in", width = 11, height = 7
+)
+
 # Interaction Plot
 #-------------------------------------------------------------------------------
 
@@ -169,7 +181,7 @@ int_plot <- ggplot(int_res, aes(
     # fun.data = "mean_cl_boot",
     fun.args = list(conf.int = .95),
     # fun.args = list(conf.int = .95, B = 5000),
-    width = 0.2,
+    width = 0.1,
     # aes(group = group),
     colour = "black",
     linewidth = 1) +
@@ -198,13 +210,13 @@ int_plot <- ggplot(int_res, aes(
   )
 
 # Save Plot
-ggsave("plots/exp-1a/plt_risky_int.png",
+ggsave("plots/exp-1a/choice-trials/plt_risky_int.png",
        plot = int_plot,
        units = "in", width = 9, height = 7,
        dpi = 500
 )
 
-ggsave("plots/exp-1a/plt_risky_int.svg",
+ggsave("plots/exp-1a/choice-trials/plt_risky_int.svg",
        plot = int_plot,
        units = "in", width = 9, height = 7
 )

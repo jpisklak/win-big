@@ -1,5 +1,5 @@
 # Run the following 3 lines to execute this script independently
-# setwd('../..') # assumes working dir is ./r-scripts/exp-1a
+# setwd('../../..') # assumes working dir is ./r-scripts/exp-1a
 # source("r-scripts/prelim_code.R")
 # source("r-scripts/exp-1a/subj_stats.R")
 # source("r-scripts/exp-1a/fo-recall/fo_recall_filter.R")
@@ -21,6 +21,7 @@ plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
   #facet_wrap(fo_value ~ group, scales = 'free_x') +
   facet_grid2(fo_value ~ group, scales = 'free_x', independent = 'x') +
   scale_fill_manual(values = brewer.pal(n = 8, name = "Dark2")) +
+  coord_cartesian(ylim = c(0, 0.8)) +
   xlab("Outcome") +
   ylab("p(Reported)") +
   labs(fill = "group") +
@@ -38,13 +39,13 @@ plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
   )
 
 # Save Plot
-ggsave("plots/exp-1a/plt_fo_prop.png",
+ggsave("plots/exp-1a/fo-recall/plt_fo_prop.png",
        plot = plt_fo_prop,
        units = "in", width = 11, height = 8,
        dpi = 500
 )
 
-ggsave("plots/exp-1a/plt_fo_prop.svg",
+ggsave("plots/exp-1a/fo-recall/plt_fo_prop.svg",
        plot = plt_fo_prop,
        units = "in", width = 11, height = 8
 )

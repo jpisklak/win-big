@@ -1,4 +1,4 @@
-#setwd('../..') #Running this code in isolation requires being in the main dir.
+# setwd('../..') # Running this code in isolation requires being in the main dir.
 source("r-scripts/prelim_code.R")
 
 # Experiment 1b
@@ -53,53 +53,88 @@ exp_1b <- exp_1b %>%
     R,
     Location,
     RiskyOutcome,
+    Click.Stim,
     Click.Location,
     Click.RT,
-    Click.Stim,
     ITI,
     RewardAmount,
-    CumulativeReward
+    CumulativeReward,
+    # Questionaire
+    Door,
+    AskFirstSlide.RESP,
+    AskFirstSlide.RT,
+    (Resp0.RESP:Resp80.RT)
+  ) %>%
+  rename(
+    session_date = SessionDate,
+    session_time = SessionTime,
+    subject = Subject,
+    age = Age,
+    gender = Gender,
+    group = Group,
+    block = Block,
+    procedure = `Procedure[Block]`,
+    block_trial = Trial,
+    chosen_stim = Click.Stim,
+    click_RT = Click.RT,
+    choice_loc = Click.Location,
+    reward_amount = RewardAmount,
+    cumulative_reward = CumulativeReward,
+    q_door_num = Door,
+    fo_resp = AskFirstSlide.RESP,
+    fo_rt = AskFirstSlide.RT
   )
 
-# Remove riddle and questionaire
-exp_1b <- exp_1b %>% filter(`Procedure[Block]` == "ExpRun")
+# Better date and time column
+date <- paste(exp_1b$session_date, exp_1b$session_time, sep = " ")
+
+exp_1b$session_date <- as.POSIXct(date,
+                                  format = "%m-%d-%Y %H:%M:%OS",
+                                  tz = "America/Edmonton"
+)
+
+# Remove riddle
+exp_1b <- exp_1b %>% filter(procedure %in%
+  c("ExpRun", "QFirstOutcome", "QPercentage"))
 
 # Order data
 exp_1b <- exp_1b %>%
-  arrange(Subject, Block, Trial)
+  arrange(session_date, subject, block, block_trial)
 
 # Rename subjects
-exp_1b$Subject <- factor(exp_1b$Subject)
-levels(exp_1b$Subject) <- 1:length(levels(exp_1b$Subject))
+exp_1b$subject <- factor(exp_1b$subject)
+levels(exp_1b$subject) <- 1:length(levels(exp_1b$subject))
 
 # Create complete trial column for each subject
 trials <- vector()
 
-for (i in 1 : length(unique(exp_1b$Subject)) ) {
-  sub_trials <- 1 : nrow(filter(exp_1b, Subject == i))
+for (i in 1 : length(unique(exp_1b$subject)) ) {
+  sub_trials <- 1 : nrow(filter(exp_1b, subject == i))
   trials <- c(trials, sub_trials)
 }
 exp_1b$trial <- trials
 
 # Create a Block Column
-exp_1b$Block <- factor(exp_1b$Block)
-levels(exp_1b$Block) <- 1:6
+exp_1b$block <- factor(exp_1b$block)
+levels(exp_1b$block) <- 1:8
 
 # Create good trial type column
 exp_1b <- exp_1b %>%
   mutate(trial_type = case_when(
-    TrialType == "CTProbe" ~ "catch",
-    TrialType == "CProbe" ~ "decision",
-    TRUE ~ 'single'
+    procedure == "ExpRun" & TrialType == "CTProbe" ~ "catch",
+    procedure == "ExpRun" & TrialType == "CProbe" ~ "decision",
+    procedure == "ExpRun" & is.na(TrialType) ~ "single",
+    procedure == "QFirstOutcome" ~ "fo_judge",
+    procedure == "QPercentage" ~ "freq_judge"
   ))
 
 # Create door select column
 exp_1b <- exp_1b %>%
   mutate(door_select = case_when(
-    Click.Stim == "Door1" ~ "fixed_high",
-    Click.Stim == "Door2" ~ "risky_high",
-    Click.Stim == "Door3" ~ "fixed_low",
-    Click.Stim == "Door4" ~ "risky_low",
+    chosen_stim == "Door1" ~ "fixed_high",
+    chosen_stim == "Door2" ~ "risky_high",
+    chosen_stim == "Door3" ~ "fixed_low",
+    chosen_stim == "Door4" ~ "risky_low",
   ))
 
 # Create extreme-outcome column
@@ -110,46 +145,86 @@ exp_1b <- exp_1b %>%
     TRUE ~ 0
   ))
 
+# Filter incomplete sessions
+incom <- exp_1b %>% 
+  group_by(subject) %>% 
+  count(procedure)
+
+ct_incom <- incom %>% filter(procedure == "ExpRun" & n < 480)
+fo_incom <- incom %>% filter(procedure == "QFirstOutcome" & n < 4)
+fj_incom <- incom %>% filter(procedure == "QPercentage" & n < 4)
+
+exp_1b <- exp_1b %>% filter(!(subject %in% ct_incom$subject))
+
+# Rename group levels
+exp_1b$group <- factor(exp_1b$group, levels = c(3, 1, 2))
+levels(exp_1b$group) <- c("BEST 50", "BEST 80-20", "BEST 20-80")
+
+# Questionaire door names
+exp_1b <- exp_1b %>%
+  mutate(q_door_val = case_when(
+    q_door_num == 1 ~ "fixed_high", # 60
+    q_door_num == 2 ~ "risky_high", # 40 or 80
+    q_door_num == 3 ~ "fixed_low",  # 20
+    q_door_num == 4 ~ "risky_low",  # 0 or 40
+  ))
+
 # Pull relevant columns
 exp_1b <- exp_1b %>%
   select(
-    Subject,
-    Age,
-    Gender,
-    Group,
-    Block,
+    session_date,
+    age,
+    gender,
+    subject,
+    group,
     trial,
-    Trial,
+    block,
+    block_trial,
     trial_type,
+    chosen_stim,
+    choice_loc,
+    click_RT,
     door_select,
     extreme_outcome,
-    Click.Location,
-    RewardAmount,
-    CumulativeReward,
-    ITI
-  ) %>%
-  rename(
-    subject = Subject,
-    age = Age,
-    gender = Gender,
-    group = Group,
-    block = Block,
-    block_trial = Trial,
-    choice_loc = Click.Location,
-    reward_amount = RewardAmount,
-    cumulative_reward = CumulativeReward
+    reward_amount,
+    cumulative_reward,
+    ITI,
+    q_door_num,
+    q_door_val,
+    fo_resp,
+    fo_rt,
+    (Resp0.RESP:Resp80.RT)
   )
 
-# Filter incomplete sessions
-incomplete <- data.frame(table(exp_1b$subject))
-incomplete <- incomplete %>% filter(Freq < 480)
-#exp_1b_incom <- filter(exp_1b, subject == incomplete$Var1)
-
-#exp_1b <- exp_1b %>% 
-#  filter(!(subject %in% incomplete$Var1))
-#exp_1b$subject <- droplevels(exp_1b$subject)
-
 # Write data
-write_csv(exp_1b, 'data/exp_1b_choice_complete.csv')
-#write_csv(exp_1b_incom, 'data/exp_1b_choice_incomplete.csv')
+write_csv(exp_1b, 'data/exp_1b_data.csv')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

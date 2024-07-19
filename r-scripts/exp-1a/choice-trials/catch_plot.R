@@ -50,12 +50,12 @@ plt_catch <- ggplot(ctch_res, aes(x = block, y = cp, group = group)) +
   theme(legend.position.inside = c(0.7, 0.4))
 
 #Save Plot  
-ggsave('plots/exp-1a/catch_results.png',
+ggsave('plots/exp-1a/choice-trials/catch_results.png',
        plot = plt_catch,
        units = 'in', width = 11, height = 8, 
        dpi = 500)
 
-ggsave('plots/exp-1a/catch_results.svg',
+ggsave('plots/exp-1a/choice-trials/catch_results.svg',
        plot = plt_catch,
        units = 'in', width = 11, height = 8)
     

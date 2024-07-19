@@ -1,4 +1,4 @@
-# setwd('../..')
+# setwd('../..') # Running this code in isolation requires being in the main dir.
 source("r-scripts/prelim_code.R")
 
 # Experiment 1a

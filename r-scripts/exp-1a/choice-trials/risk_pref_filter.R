@@ -43,4 +43,4 @@ risky_sum_stats <- risky_res %>%
     median = median(cp),
     IQR = IQR(cp)
   ) %>% 
-  filter(block <= 4)
+  filter(block > 4)
