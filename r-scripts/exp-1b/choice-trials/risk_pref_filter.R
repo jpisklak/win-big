@@ -1,5 +1,5 @@
 # Run the following 3 lines to execute this script independently
-# setwd('../../..') # assumes working dir is ./r-scripts/exp-1b
+# setwd('../../..') # assumes wd is main dir.
 # source("r-scripts/prelim_code.R")
 # source("r-scripts/exp-1b/subj_stats.R")
 #-------------------------------------------------------------------------------
