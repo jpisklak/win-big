@@ -5,7 +5,6 @@
 This repository contains all the data and R code used for the analyses in the *win-big study* and generates an HTML document of the results.
 
 The most accessible form of the data to download is `exp_1a_data.csv` and `exp_1b_data.csv` respectively, located within the `./data` directory.
-  - Session dates and times are formatted as ISO 8601 with a UTC timezone.
 
 To view the results document, download `win-big-results--xxxx-xx-xx.html` and open it in your web browser.
 
@@ -15,7 +14,7 @@ The directory, file, and variable names within this repository are designed to b
 
 - `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document.
 
-- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp_1a_data_filter.R` and `./r-scripts/exp_1b_data_filter.R` 
+- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp_1a_data_filter.R` and `./r-scripts/exp_1b_data_filter.R`
 
 - `./data/raw-data`: Contains all the raw data merged from the e-prime files.
 
