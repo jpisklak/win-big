@@ -14,7 +14,7 @@ The directory, file, and variable names within this repository are designed to b
 
 - `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document.
 
-- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp_1a_data_filter.R` and `./r-scripts/exp_1b_data_filter.R`
+- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp-1a/exp_1a_data_filter.R` and `./r-scripts/exp-1b/exp_1b_data_filter.R`
 
 - `./data/raw-data`: Contains all the raw data merged from the e-prime files.
 
