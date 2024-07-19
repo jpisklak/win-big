@@ -4,6 +4,9 @@
 
 This repository contains all the data and R code used for the analyses in the *win-big study* and generates an HTML document of the results.
 
+The most accessible form of the data to download is `exp_1a_data.csv` and `exp_1b_data.csv` respectively, located within the `./data` directory.
+  - Session dates and times are formatted as ISO 8601 with a UTC timezone.
+
 To view the results document, download `win-big-results--xxxx-xx-xx.html` and open it in your web browser.
 
 ## Contents
@@ -16,9 +19,7 @@ The directory, file, and variable names within this repository are designed to b
 
 - `./data/raw-data`: Contains all the raw data merged from the e-prime files.
 
-  - `wc_full_data.csv`: All the merged Pavlovia and Prolific files with improved column names, including incomplete and aborted data.
-
-- `./r-scripts`: Contains scripts for specific tasks such as merging raw data files, plotting risky choice results, etc. These files are sourced in the markdown generation. To run one of these scripts independently, adjust the working directory to `./win-big` and run the dependencies listed in the script.
+- `./r-scripts`: Contains scripts for specific tasks such as merging raw data files, plotting risky choice results, etc. These files are sourced in the markdown generation. To run one of these scripts independently, adjust the working directory to `./win-big` and run the dependencies listed at the top of the script.
 
 - `./plots`: Stores all generated plots in both .png and .svg formats.
 
