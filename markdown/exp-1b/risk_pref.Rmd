@@ -26,7 +26,7 @@ include_graphics(
 
 <details>
   <summary>
-  Plot - Interaction plot with 95% CIs
+  Plot - Interaction plot with 95% CIs (Block 5 & 6)
   </summary>
   
 - Showing the combined effect of block 5 and 6.
