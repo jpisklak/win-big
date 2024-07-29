@@ -14,12 +14,12 @@ The directory, file, and variable names within this repository are designed to b
 
 - `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document.
 
-- `./data`: Contains cleaned versions of the raw data generated with `./r-scripts/exp-1a/exp_1a_data_filter.R` and `./r-scripts/exp-1b/exp_1b_data_filter.R`
+- `/data`: Contains cleaned versions of the raw data generated with `/r-scripts/exp-1a/exp_1a_data_filter.R` and `/r-scripts/exp-1b/exp_1b_data_filter.R`
 
-- `./data/raw-data`: Contains all the raw data merged from the e-prime files.
+- `/data/raw-data`: Contains all the raw data merged from the e-prime files.
 
-- `./r-scripts`: Contains scripts for specific tasks such as merging raw data files, plotting risky choice results, etc. These files are sourced in the markdown generation. To run one of these scripts independently, adjust the working directory to `./win-big` and run the dependencies listed at the top of the script.
+- `/r-scripts`: Contains scripts for specific tasks such as merging raw data files, plotting risky choice results, etc. These files are sourced in the markdown generation. To run one of these scripts independently, adjust the working directory to `/win-big` and run the dependencies listed at the top of the script.
 
-- `./plots`: Stores all generated plots in both .png and .svg formats.
+- `/plots`: Stores all generated plots in both .png and .svg formats.
 
-- `./markdown`: Contains the R markdown files used to generate the HTML results document.
+- `/markdown`: Contains the R markdown files used to generate the HTML results document.
