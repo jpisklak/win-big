@@ -107,13 +107,9 @@ exp_1a$subject <- factor(exp_1a$subject)
 levels(exp_1a$subject) <- 1:length(levels(exp_1a$subject))
 
 # Create complete trial column for each subject
-trials <- vector()
-
-for (i in 1 : length(unique(exp_1a$subject)) ) {
-  sub_trials <- 1 : nrow(filter(exp_1a, subject == i))
-  trials <- c(trials, sub_trials)
-}
-exp_1a$trial <- trials
+exp_1a <- exp_1a %>%
+  group_by(subject) %>%
+  mutate(trial = row_number())
 
 # Create a Block Column
 exp_1a$block <- factor(exp_1a$block)
