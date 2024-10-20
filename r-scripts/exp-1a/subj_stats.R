@@ -54,6 +54,16 @@ pre_catch <- demo_info %>%
 
 N <- sum(pre_catch$n)
 
+demo_info %>%
+  group_by(gender) %>%
+  summarise(
+    n = length(subject),
+    age_mean = mean(age, na.rm = TRUE),
+    age_sd = sd(age, na.rm = TRUE),
+    age_median = median(age, na.rm = TRUE),
+    age_IQR = IQR(age, na.rm = TRUE)
+  )
+
 # Stats post catch exclusion
 demo_info_f <- filter(demo_info, !(subject %in% exclude$subject))
 
