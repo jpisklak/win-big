@@ -10,7 +10,7 @@ props$fo_cat <- factor(props$fo_cat, levels = c("0", "+40", "+80", "Other"))
 
 # Plot
 plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
-  geom_hline(yintercept = 0.5, linetype = 3) +
+  #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "identity",
     aes(fill = group),
