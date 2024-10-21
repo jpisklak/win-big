@@ -104,19 +104,19 @@ aov_res$choice_value <- factor(aov_res$choice_value,
 
 dodge <- 0.9
 
-aov_bar <- ggplot(aov_res, aes(x = group, y = cp)) +
-  geom_hline(yintercept = 0.5, linetype = 3) +
+aov_bar <- ggplot(diffs, aes(x = group, y = cp)) +
+  #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "summary", fun = mean,
     #position='dodge',
-    aes(fill = choice_value),
+    aes(fill = group),
     colour = "black",
     linewidth = 1,
     position = position_dodge()
   ) +
   geom_errorbar(
     stat = "summary",
-    aes(group = choice_value),
+    aes(group = group),
     #position = 'dodge',
     fun.data = "mean_cl_normal",
     fun.args = list(conf.int = .95),
@@ -125,10 +125,11 @@ aov_bar <- ggplot(aov_res, aes(x = group, y = cp)) +
     linewidth = 1,
     position = position_dodge(width = dodge)
   ) +
-  scale_fill_manual(values = c("#ff6961", "#77dd77", "#bca36d")) +
-  coord_cartesian(ylim = c(0, 0.8)) +
+  #scale_fill_manual(values = c("#ff6961", "#77dd77", "#bca36d")) +
+  scale_fill_brewer(palette = "Dark2") +
+  coord_cartesian(ylim = c(0, 0.5)) +
   xlab("Group") +
-  ylab("p(Risky)") +
+  ylab("p(Risky: High - Low)") +
   labs(fill = "Choice Value:") +
   #guides(fill = guide_legend(byrow = TRUE)) +
   guides(
@@ -136,19 +137,21 @@ aov_bar <- ggplot(aov_res, aes(x = group, y = cp)) +
   ) +
   theme_custom() +
   theme(
-    legend.key.spacing.x = unit(0.75, 'cm')
+    legend.key.spacing.x = unit(0.75, 'cm'),
+    axis.text.x = element_text(size = 22),
+    legend.position = 'none'
   )
 
 # Save Plot
 ggsave("plots/exp-1b/choice-trials/plt_risky_bar.png",
        plot = aov_bar,
-       units = "in", width = 11, height = 7,
+       units = "in", width = 8, height = 7,
        dpi = 500
 )
 
 ggsave("plots/exp-1b/choice-trials/plt_risky_bar.svg",
        plot = aov_bar,
-       units = "in", width = 11, height = 7
+       units = "in", width = 8, height = 7
 )
 
 # Interaction Plot
