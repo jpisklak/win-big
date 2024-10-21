@@ -21,7 +21,7 @@ plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
   #facet_wrap(fo_value ~ group, scales = 'free_x') +
   facet_grid2(fo_value ~ group, scales = 'free_x', independent = 'x') +
   scale_fill_manual(values = brewer.pal(n = 8, name = "Dark2")) +
-  coord_cartesian(ylim = c(0, 0.8)) +
+  coord_cartesian(ylim = c(0, 0.85)) +
   xlab("Outcome") +
   ylab("p(Reported)") +
   labs(fill = "group") +
