@@ -1,5 +1,6 @@
 # Install and Load Necessary Packages
 pkgs <- c(
+  "rcompanion",
   "nlme",
   "Hmisc",
   "RColorBrewer",

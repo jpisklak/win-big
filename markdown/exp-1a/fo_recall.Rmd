@@ -14,7 +14,7 @@ source('r-scripts/exp-1a/fo-recall/fo_recall_filter.R')
 source('r-scripts/exp-1a/fo-recall/fo_recall_plots.R')
 
 include_graphics(
-  file.path(main_dir,"plots/exp-1a/fo-recall/plt_fo_prop.svg")
+  file.path(main_dir,"plots/exp-1a/fo-recall/plt_fo_prop.png")
 )
 ```
 
@@ -26,4 +26,121 @@ Note:
 <br>
 
 </details>
+
+<details>
+  <summary>
+    2x3 Chi-Squared Tests
+  </summary>
+
+```{r}
+source('r-scripts/exp-1a/fo-recall/chisq_fo_recall_analysis.R')
+
+chi <- round(c(fo_high_test$statistic, fo_low_test$statistic), 2)
+df <- round(c(fo_high_test$parameter, fo_low_test$parameter), 2)
+p <- round(c(fo_high_test$p.value, fo_low_test$p.value), 3)
+v <- round(c(fo_high_eff, fo_low_eff), 2)
+```
+
+<h4> High Value Results </h4>
+
+```{r}
+kable(fo_high_tab, 'html', caption = 'High Value Contingency Table') %>%
+  kable_classic(full_width = F, position = "left", html_font = "Arial")
+```
+
+<br>
+
+$\chi^2(`r df[1]`) = `r chi[1]`, p = `r p[1]`, \varphi_c = `r v[1]`$
+
+- Cannot rule out that recalling the extreme value is independent of group.
+
+
+```{r}
+kable(std_res_high, 'html', caption = 'Standardized Residuals', digits = 2) %>%
+  kable_classic(full_width = F, position = "float_left", html_font = "Arial")
+
+kable(p_high, 'html', caption = 'p-values', digits = 3) %>%
+  kable_classic(full_width = F, position = "float_left", html_font = "Arial")
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+None of the three conditions differ significantly from the expected value.
+
+<br>
+
+
+<h4> Low Value Results </h4>
+
+```{r}
+kable(fo_low_tab, 'html', caption = 'Low Value Contingency Table') %>%
+  kable_classic(full_width = F, position = "left", html_font = "Arial")
+```
+
+<br>
+
+$\chi^2(`r df[2]`) = `r chi[2]`, p = `r p[2]`, \varphi_c = `r v[2]`$
+
+- Cannot rule out that recalling the extreme value is independent of group.
+
+
+```{r}
+kable(std_res_low, 'html', caption = 'Standardized Residuals', digits = 2) %>%
+  kable_classic(full_width = F, position = "float_left", html_font = "Arial")
+
+kable(p_low, 'html', caption = 'p-values', digits = 3) %>%
+  kable_classic(full_width = F, position = "float_left", html_font = "Arial")
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+- None of the three conditions differ significantly from the expected value.
+
+<br>
+
+<h4>Post-Hoc Pairwise Fisher-Exact Tests</h4>
+
+```{r}
+kable(fish_tests, 'html', digits = 4) %>%
+  kable_classic(full_width = F, position = "left", html_font = "Arial")
+```
+
+<br>
+
+- Nothing reached significance.  
+
+<br>
+
+Note:
+
+- In the contingency tables, 'Yes' indicates the extreme value was recalled, 'No' indicates that it was not.
+
+- Only recalled outcomes that matched the programmed values were included. i.e., if they saw the *High Value Risky Door*, 80 was logged as "Yes" and 40 was logged as "No." If they saw the *Low Value Risky Door*, 0 was logged as "Yes", 40 was logged as "No". Participants who responded with any "other" values were removed from the analysis. Only Risky doors were evaluated. 
+
+- In total, removing "other" responses resulted `r n_other` participants being excluded from these analyses leaving a final N = `r n_fo`.
+
+- $\varphi_c$ is Cramér’s V, a measure of association for two nominal variables (i.e., an effect size of sorts). It can take a value between 0 and 1, with 0 indicating no association (i.e., full independence). 
+
+- Post-hoc analysis on each $\chi^2$ test was conducted by evaluating the standardized residuals from the chi-square analysis because it seemed the most intuitive approach. However, pairwise Pearson Chi-squared or Fisher Exact tests across the three conditions were also run. The `p_value_adj` column shows corrected p-values using the Holm-Bonferroni method.
+
+<br>
+
+
+
+
+
+
+
 

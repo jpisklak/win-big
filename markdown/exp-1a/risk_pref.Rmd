@@ -16,7 +16,7 @@ source('r-scripts/exp-1a/choice-trials/risk_pref_filter.R')
 ```{r, out.width = '100%', out.height = '100%'}
 source('r-scripts/exp-1a/choice-trials/risk_pref_plots.R')
 include_graphics(
-  file.path(main_dir,"plots/exp-1a/choice-trials/plt_risky_blk.svg")
+  file.path(main_dir,"plots/exp-1a/choice-trials/plt_risky_blk.png")
 )
 ```
 
@@ -33,7 +33,7 @@ include_graphics(
   
 ```{r, out.width = '100%', out.height = '100%'}
 include_graphics(
-  file.path(main_dir,"plots/exp-1a/choice-trials/plt_risky_int.svg")
+  file.path(main_dir,"plots/exp-1a/choice-trials/plt_risky_int.png")
 )
 ```
 
