@@ -1,6 +1,5 @@
 ---
 title: "Win Big Results"
-# author: "Jeffrey M. Pisklak"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -16,7 +15,6 @@ nocite: |
   @R
 ---
 
-<!-- https://www.w3schools.com/tags/tag_details.asp -->
 <style>
 details > summary {
   padding: 4px;

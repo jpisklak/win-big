@@ -21,7 +21,7 @@ fo$fo_resp <- fo$fo_resp %>%
   str_replace_all("[[:punct:]ENTER]", "") %>% 
   as.numeric()
 
-# Find and remove non-real responses
+# Find and remove "non-real" responses
   #View(fo %>% select(subject, fo_resp))
 
 nr <- fo %>%
