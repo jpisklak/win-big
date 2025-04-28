@@ -61,10 +61,10 @@
 <polyline points='190.20,434.08 190.20,431.34 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='336.48,434.08 336.48,431.34 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='482.75,434.08 482.75,431.34 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='190.20' y='452.02' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='87.66px' lengthAdjust='spacingAndGlyphs'>BEST 50</text>
+<text x='190.20' y='452.02' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='119.47px' lengthAdjust='spacingAndGlyphs'>BEST 50-50</text>
 <text x='336.48' y='452.02' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='119.47px' lengthAdjust='spacingAndGlyphs'>BEST 80-20</text>
 <text x='482.75' y='452.02' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='119.47px' lengthAdjust='spacingAndGlyphs'>BEST 20-80</text>
 <text x='336.48' y='494.73' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='100.06px' lengthAdjust='spacingAndGlyphs'>Group</text>
-<text transform='translate(35.05,218.41) rotate(-90)' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='324.08px' lengthAdjust='spacingAndGlyphs'>p(Risky: High - Low)</text>
+<text transform='translate(35.05,218.41) rotate(-90)' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='396.13px' lengthAdjust='spacingAndGlyphs'>Extreme-Outcome Score</text>
 </g>
 </svg>

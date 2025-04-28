@@ -13,7 +13,10 @@ fj_long$fj_outcome <- factor(fj_long$fj_outcome,
 # Note data is qualitative and thus probably shouldn't be plotted this way.
 dodge <- position_dodge(.9)
 
-plt_fj_means <- ggplot(fj_long, 
+fj_long_rename <- fj_long
+levels(fj_long_rename$group) <- c("EX 50-50", "EX 80-20", "EX 20-80")
+
+plt_fj_means <- ggplot(fj_long_rename, 
                        aes(x = fj_outcome, y = fj_resp,
                            fill = group, group = group
                            )

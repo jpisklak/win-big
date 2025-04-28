@@ -8,8 +8,11 @@
 props$fo_value <- factor(props$fo_value, levels = c("High", "Low"))
 props$fo_cat <- factor(props$fo_cat, levels = c("0", "+40", "+80", "Other"))
 
+props_rename <- props
+levels(props_rename$group) <- c("BEST 50-50", "BEST 80-20", "BEST 20-80")
+
 # Plot
-plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
+plt_fo_prop <- ggplot(props_rename, aes(x = fo_cat, y = prop, group = group)) +
   #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "identity",

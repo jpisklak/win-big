@@ -8,7 +8,11 @@
 # Conventional EO Plot by Block
 #-------------------------------------------------------------------------------
 dodge <- 0.25
-plt_risky_blk <- ggplot(risky_res, aes(
+
+risky_res_rename <- risky_res
+levels(risky_res_rename$group) <- c("BEST 50-50", "BEST 80-20", "BEST 20-80")
+
+plt_risky_blk <- ggplot(risky_res_rename, aes(
   x = block, y = cp,
   group = choice_value,
   shape = choice_value,
@@ -104,7 +108,10 @@ aov_res$choice_value <- factor(aov_res$choice_value,
 
 dodge <- 0.9
 
-aov_bar <- ggplot(diffs, aes(x = group, y = cp)) +
+diffs_rename <- diffs
+levels(diffs_rename$group) <- c("BEST 50-50", "BEST 80-20", "BEST 20-80")
+
+aov_bar <- ggplot(diffs_rename, aes(x = group, y = cp)) +
   #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "summary", fun = mean,
@@ -129,7 +136,7 @@ aov_bar <- ggplot(diffs, aes(x = group, y = cp)) +
   scale_fill_brewer(palette = "Dark2") +
   coord_cartesian(ylim = c(0, 0.5)) +
   xlab("Group") +
-  ylab("p(Risky: High - Low)") +
+  ylab("Extreme-Outcome Score") +
   labs(fill = "Choice Value:") +
   #guides(fill = guide_legend(byrow = TRUE)) +
   guides(
