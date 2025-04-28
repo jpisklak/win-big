@@ -41,6 +41,12 @@ demo_info <- data_1a %>%
   filter(trial == 1) %>%
   select(subject, age, gender, group)
 
+demo_info |> 
+  summarise(
+    m = mean(age),
+    s = sd(age)
+  )
+
 # Stats pre catch exclusion
 pre_catch <- demo_info %>%
   group_by(group, gender) %>%
