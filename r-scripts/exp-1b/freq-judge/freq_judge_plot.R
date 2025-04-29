@@ -10,7 +10,6 @@ fj_long$fj_outcome <- factor(fj_long$fj_outcome,
 
 # Plot (Means and 95% CI)
 #-------------------------------------------------------------------------------
-# Note data is qualitative and thus probably shouldn't be plotted this way.
 dodge <- position_dodge(.9)
 
 fj_long_rename <- fj_long
@@ -27,17 +26,8 @@ levels(fj_long_rename$colour_col)
 col_palette <- c("white", "#7570B3", "#7570B3", 
                  "white", "#1B9E77", "#1B9E77",
                  "white", "#D95F02", "#D95F02")
-#50-50 - green
-#80-20 - Orange
-#20-80 - purple
 
-#All '+40' are white
-#Other are grey 
-
-
-
-
-
+# Plot
 plt_fj_means <- ggplot(fj_long_rename, 
                        aes(x = fj_outcome, y = fj_resp,
                            fill = colour_col, group = group
