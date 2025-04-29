@@ -20,6 +20,17 @@ fo <- fo %>%
     q_door_val == "risky_high" & fo_resp != 80 ~ "No",
   ))
 
+# Goodness of Fit test
+#-------------------------------------------------------------------------------
+gf_high <- fo |> filter(fo$fo_cat != "0" & fo_value == "High")
+gf_high_tab <- xtabs(~ fo_cat, data = gf_high)
+chisq.test(gf_high_tab, p = c(0.5, 0.5))
+
+gf_low <- fo |> filter(fo$fo_cat != "+80" & fo_value == "Low")
+gf_low_tab <- xtabs(~ fo_cat, data = gf_low)
+chisq.test(gf_low_tab, p = c(0.5, 0.5))
+
+
 # 2 X 3 Pearson’s Chi-squared Test
 #-------------------------------------------------------------------------------
 

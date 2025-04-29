@@ -106,6 +106,25 @@ aov_res$choice_value <- factor(aov_res$choice_value,
                                levels = c("Low", "High", "High-Low")
 )
 
+
+# Sum stats for difference scores
+diffs |> 
+  group_by(group) |> 
+  summarise(
+    n = length(cp),
+    m = mean(cp),
+    df = n - 1,
+    alpha = 0.05,
+    t_crit = abs(qt(alpha / 2, df = df)),
+    se = sd(cp) / sqrt(n),
+    moe = se * t_crit,
+    ci_bot = m - moe,
+    ci_top = m + moe,
+    mu = 0,
+    d = (m - mu) / sd(cp)
+  )
+
+
 dodge <- 0.9
 
 diffs_rename <- diffs
