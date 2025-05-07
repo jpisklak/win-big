@@ -155,7 +155,7 @@ exp_1a <- exp_1a %>% filter(!(subject %in% ct_incom$subject))
 
 # Rename group levels
 exp_1a$group <- factor(exp_1a$group, levels = c(3, 1, 2))
-levels(exp_1a$group) <- c("EX 50", "EX 80-20", "EX 20-80")
+levels(exp_1a$group) <- c("EX 50-50", "EX 80-20", "EX 20-80")
 
 # Questionaire door names
 exp_1a <- exp_1a %>%

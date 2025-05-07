@@ -74,7 +74,7 @@
 <polyline points='199.18,383.81 199.18,381.07 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='369.69,383.81 369.69,381.07 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='540.21,383.81 540.21,381.07 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='199.18' y='401.76' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='59.94px' lengthAdjust='spacingAndGlyphs'>EX 50</text>
+<text x='199.18' y='401.76' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='91.75px' lengthAdjust='spacingAndGlyphs'>EX 50-50</text>
 <text x='369.69' y='401.76' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='91.75px' lengthAdjust='spacingAndGlyphs'>EX 80-20</text>
 <text x='540.21' y='401.76' text-anchor='middle' style='font-size: 22.00px; font-family: "Arial";' textLength='91.75px' lengthAdjust='spacingAndGlyphs'>EX 20-80</text>
 <text x='369.69' y='444.47' text-anchor='middle' style='font-size: 36.00px; font-family: "Arial";' textLength='100.06px' lengthAdjust='spacingAndGlyphs'>Group</text>

@@ -7,7 +7,7 @@
 data_1a <- read_csv("data/exp_1a_data.csv")
 
 data_1a$group <- factor(data_1a$group,
-  levels = c("EX 50", "EX 80-20", "EX 20-80")
+  levels = c("EX 50-50", "EX 80-20", "EX 20-80")
 )
 
 # Collect catch trials

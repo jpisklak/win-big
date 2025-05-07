@@ -154,7 +154,7 @@ exp_1b <- exp_1b %>% filter(!(subject %in% ct_incom$subject))
 
 # Rename group levels
 exp_1b$group <- factor(exp_1b$group, levels = c(3, 1, 2))
-levels(exp_1b$group) <- c("BEST 50", "BEST 80-20", "BEST 20-80")
+levels(exp_1b$group) <- c("BEST 50-50", "BEST 80-20", "BEST 20-80")
 
 # Questionaire door names
 exp_1b <- exp_1b %>%
@@ -194,33 +194,3 @@ exp_1b <- exp_1b %>%
 
 # Write data
 write_csv(exp_1b, 'data/exp_1b_data.csv')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

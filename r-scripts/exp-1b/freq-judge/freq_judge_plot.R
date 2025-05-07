@@ -12,23 +12,20 @@ fj_long$fj_outcome <- factor(fj_long$fj_outcome,
 #-------------------------------------------------------------------------------
 dodge <- position_dodge(.9)
 
-fj_long_rename <- fj_long
-levels(fj_long_rename$group) <- c("BEST 50-50", "BEST 80-20", "BEST 20-80")
-
 # Colour levels
 brewer.pal(n = 8, name = "Dark2")
 
-fj_long_rename$colour_col <- paste(fj_long_rename$group, fj_long_rename$fj_outcome,
-                                   sep = "_")
-fj_long_rename$colour_col <- factor(fj_long_rename$colour_col)
-levels(fj_long_rename$colour_col)
+fj_long$colour_col <- paste(fj_long$group, fj_long$fj_outcome, sep = "_")
+fj_long$colour_col <- factor(fj_long$colour_col)
+
+levels(fj_long$colour_col)
 
 col_palette <- c("white", "#7570B3", "#7570B3", 
                  "white", "#1B9E77", "#1B9E77",
                  "white", "#D95F02", "#D95F02")
 
 # Plot
-plt_fj_means <- ggplot(fj_long_rename, 
+plt_fj_means <- ggplot(fj_long, 
                        aes(x = fj_outcome, y = fj_resp,
                            fill = colour_col, group = group
                            )

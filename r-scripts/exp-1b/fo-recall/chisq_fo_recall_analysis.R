@@ -58,14 +58,14 @@ p_low <- pnorm(abs(std_res_low), lower.tail = FALSE) * 2
 
 # Pairwise Fisher-Exact tests - High Value
 
-# BEST 50 vs BEST 80-20
+# BEST 50-50 vs BEST 80-20
 h_50_v_8020 <- fo %>% 
   filter(fo_value == "High" & group != "BEST 20-80") %>%
   droplevels()
 h_50_v_8020 <- xtabs(~ group + fo_eval, data = h_50_v_8020)
 h_50_v_8020 <- fisher.test(h_50_v_8020)
 
-# BEST 50 vs BEST 20-80
+# BEST 50-50 vs BEST 20-80
 h_50_v_2080 <- fo %>% 
   filter(fo_value == "High" & group != "BEST 80-20") %>%
   droplevels()
@@ -74,7 +74,7 @@ h_50_v_2080 <- fisher.test(h_50_v_2080)
 
 # BEST 80-20 vs BEST 20-80
 h_8020_v_2080 <- fo %>% 
-  filter(fo_value == "High" & group != "BEST 50") %>%
+  filter(fo_value == "High" & group != "BEST 50-50") %>%
   droplevels()
 h_8020_v_2080 <- xtabs(~ group + fo_eval, data = h_8020_v_2080)
 h_8020_v_2080 <- fisher.test(h_8020_v_2080)
@@ -83,14 +83,14 @@ h_8020_v_2080 <- fisher.test(h_8020_v_2080)
 
 # Pairwise Fisher-Exact tests - Low Value
 
-# BEST 50 vs BEST 80-20
+# BEST 50-50 vs BEST 80-20
 l_50_v_8020 <- fo %>% 
   filter(fo_value == "Low" & group != "BEST 20-80") %>%
   droplevels()
 l_50_v_8020 <- xtabs(~ group + fo_eval, data = l_50_v_8020)
 l_50_v_8020 <- fisher.test(l_50_v_8020)
 
-# BEST 50 vs BEST 20-80
+# BEST 50-50 vs BEST 20-80
 l_50_v_2080 <- fo %>% 
   filter(fo_value == "Low" & group != "BEST 80-20") %>%
   droplevels()
@@ -99,7 +99,7 @@ l_50_v_2080 <- fisher.test(l_50_v_2080)
 
 # BEST 80-20 vs BEST 20-80
 l_8020_v_2080 <- fo %>% 
-  filter(fo_value == "Low" & group != "BEST 50") %>%
+  filter(fo_value == "Low" & group != "BEST 50-50") %>%
   droplevels()
 l_8020_v_2080 <- xtabs(~ group + fo_eval, data = l_8020_v_2080)
 l_8020_v_2080 <- fisher.test(l_8020_v_2080)
@@ -110,8 +110,8 @@ l_8020_v_2080 <- fisher.test(l_8020_v_2080)
 fish_tests <- tibble(
   value = c(rep("High", 3), rep("Low", 3)),
   comparison = rep(c(
-    "BEST 50 : BEST 80-20",
-    "BEST 50 : BEST 20-80",
+    "BEST 50-50 : BEST 80-20",
+    "BEST 50-50 : BEST 20-80",
     "BEST 80-20 : BEST 20-80"
   ), 2),
   odds_ratio = c(

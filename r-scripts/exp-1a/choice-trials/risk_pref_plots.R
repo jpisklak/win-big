@@ -9,10 +9,7 @@
 #-------------------------------------------------------------------------------
 dodge <- 0.25
 
-risky_res_rename <- risky_res
-levels(risky_res_rename$group) <- c("EX 50-50", "EX 80-20", "EX 20-80")
-
-plt_risky_blk <- ggplot(risky_res_rename, aes(
+plt_risky_blk <- ggplot(risky_res, aes(
   x = block, y = cp,
   group = choice_value,
   shape = choice_value,
@@ -127,10 +124,7 @@ diffs |>
 
 dodge <- 0.9
 
-diffs_rename <- diffs
-levels(diffs_rename$group) <- c("EX 50-50", "EX 80-20", "EX 20-80")
-
-aov_bar <- ggplot(diffs_rename, aes(x = group, y = cp)) +
+aov_bar <- ggplot(diffs, aes(x = group, y = cp)) +
   #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "summary", fun = mean,

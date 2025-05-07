@@ -75,7 +75,7 @@ h_50_v_2080 <- fisher.test(h_50_v_2080)
 
 # EX 80-20 vs EX 20-80
 h_8020_v_2080 <- fo %>% 
-  filter(fo_value == "High" & group != "EX 50") %>%
+  filter(fo_value == "High" & group != "EX 50-50") %>%
   droplevels()
 h_8020_v_2080 <- xtabs(~ group + fo_eval, data = h_8020_v_2080)
 h_8020_v_2080 <- fisher.test(h_8020_v_2080)
@@ -100,7 +100,7 @@ l_50_v_2080 <- fisher.test(l_50_v_2080)
 
 # EX 80-20 vs EX 20-80
 l_8020_v_2080 <- fo %>% 
-  filter(fo_value == "Low" & group != "EX 50") %>%
+  filter(fo_value == "Low" & group != "EX 50-50") %>%
   droplevels()
 l_8020_v_2080 <- xtabs(~ group + fo_eval, data = l_8020_v_2080)
 l_8020_v_2080 <- fisher.test(l_8020_v_2080)
@@ -111,8 +111,8 @@ l_8020_v_2080 <- fisher.test(l_8020_v_2080)
 fish_tests <- tibble(
   value = c(rep("High", 3), rep("Low", 3)),
   comparison = rep(c(
-    "EX 50 : EX 80-20",
-    "EX 50 : EX 20-80",
+    "EX 50-50 : EX 80-20",
+    "EX 50-50 : EX 20-80",
     "EX 80-20 : EX 20-80"
   ), 2),
   odds_ratio = c(
@@ -134,7 +134,3 @@ fish_tests <- tibble(
 )
 
 fish_tests$p_value_adj <- p.adjust(fish_tests$p_value, method = "holm")
-
-
-# https://rcompanion.org/handbook/H_04.html
-# https://www.statology.org/interpret-cramers-v/

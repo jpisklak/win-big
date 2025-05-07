@@ -8,23 +8,18 @@
 props$fo_value <- factor(props$fo_value, levels = c("High", "Low"))
 props$fo_cat <- factor(props$fo_cat, levels = c("0", "+40", "+80", "Other"))
 
-props_rename <- props
-levels(props_rename$group) <- c("EX 50-50", "EX 80-20", "EX 20-80")
-
 # New Colour levels
-brewer.pal(n = 8, name = "Dark2")
+props$colour_col <- paste(props$group, props$fo_cat, sep = "_")
+props$colour_col <- factor(props$colour_col)
 
-props_rename$colour_col <- paste(props_rename$group, props_rename$fo_cat,
-                                 sep = "_")
-props_rename$colour_col <- factor(props_rename$colour_col)
-levels(props_rename$colour_col)
+levels(props$colour_col)
 
 col_palette <- c("white", "#7570B3", "#7570B3", "grey",
                  "white", "#1B9E77", "#1B9E77", "grey",
                  "white", "#D95F02", "#D95F02", "grey")
 
 # Plot
-plt_fo_prop <- ggplot(props_rename, aes(x = fo_cat, y = prop, group = group)) +
+plt_fo_prop <- ggplot(props, aes(x = fo_cat, y = prop, group = group)) +
   #geom_hline(yintercept = 0.5, linetype = 3) +
   geom_bar(
     stat = "identity",

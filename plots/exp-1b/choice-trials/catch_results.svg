@@ -146,7 +146,7 @@
 <rect x='486.72' y='328.52' width='42.52' height='28.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 <line x1='490.97' y1='342.70' x2='524.98' y2='342.70' style='stroke-width: 4.27; stroke: #7570B3; stroke-linecap: butt;' />
 <polygon points='507.98,353.83 519.11,342.70 507.98,331.56 496.84,342.70 ' style='stroke-width: 2.83; fill: #7570B3;' />
-<text x='534.72' y='295.31' style='font-size: 26.00px; font-family: "Arial";' textLength='103.59px' lengthAdjust='spacingAndGlyphs'>BEST 50</text>
+<text x='534.72' y='295.31' style='font-size: 26.00px; font-family: "Arial";' textLength='141.16px' lengthAdjust='spacingAndGlyphs'>BEST 50-50</text>
 <text x='534.72' y='323.66' style='font-size: 26.00px; font-family: "Arial";' textLength='141.16px' lengthAdjust='spacingAndGlyphs'>BEST 80-20</text>
 <text x='534.72' y='352.00' style='font-size: 26.00px; font-family: "Arial";' textLength='141.16px' lengthAdjust='spacingAndGlyphs'>BEST 20-80</text>
 </g>
