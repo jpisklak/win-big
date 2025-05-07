@@ -102,7 +102,7 @@ source("r-scripts/prelim_code.R")
 - Block 3: 80% extreme values (0 low, 80 high)
 - Block 4-6: 50% extreme values.
 
-<h5>EX 50 (control)</h5> 
+<h5>EX 50-50 (control)</h5> 
 - All blocks: 50% extreme values.
 
 <br>
@@ -197,7 +197,7 @@ source("r-scripts/prelim_code.R")
 - Block 3: 80% chance of best outcome on risky options.
 - Block 4-6: 50% of best outcome on risky options.
 
-<h5>BEST 50 (control)</h5>
+<h5>BEST 50-50 (control)</h5>
 - All blocks: 50% of best outcome on risky options.
 
 <br>
