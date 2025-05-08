@@ -30,12 +30,39 @@ Note:
 
 <details>
   <summary>
-    2x3 Chi-Squared Tests
+    Goodness-of-fit tests - Extreme vs Non-Extreme Reporting
   </summary>
-
+  
 ```{r}
 source('r-scripts/exp-1a/fo-recall/chisq_fo_recall_analysis.R')
 
+chi <- round(c(gf_high_test$statistic, gf_low_test$statistic), 3)
+df <- round(c(gf_high_test$parameter, gf_low_test$parameter), 3)
+p <- round(c(gf_high_test$p.value, gf_low_test$p.value), 3)
+```
+
+<br>
+
+<h4> High Value Result </h4>
+
+$\chi^2(`r df[1]`) = `r chi[1]`, p < 0.001$
+
+<br>
+
+<h4> Low Value Result </h4>  
+
+$\chi^2(`r df[2]`) = `r chi[2]`, p < 0.001$
+
+<br>
+
+</details>  
+
+<details>
+  <summary>
+    2 $\times$ 3 Chi-Squared Tests - Extreme vs Non-Extreme $\times$ Group
+  </summary>
+
+```{r}
 chi <- round(c(fo_high_test$statistic, fo_low_test$statistic), 2)
 df <- round(c(fo_high_test$parameter, fo_low_test$parameter), 2)
 p <- round(c(fo_high_test$p.value, fo_low_test$p.value), 3)
@@ -134,11 +161,11 @@ Note:
 
 - $\varphi_c$ is Cramér’s V, a measure of association for two nominal variables (i.e., an effect size of sorts). It can take a value between 0 and 1, with 0 indicating no association (i.e., full independence). 
 
-- Post-hoc analysis on each $\chi^2$ test was conducted by evaluating the standardized residuals from the chi-square analysis because it seemed the most intuitive approach. However, pairwise Pearson Chi-squared or Fisher Exact tests across the three conditions were also run. The `p_value_adj` column shows corrected p-values using the Holm-Bonferroni method.
+- A post-hoc analysis on each $\chi^2$ test was conducted by evaluating the standardized residuals from the chi-square analysis because it seemed the most  natural approach. However, pairwise Fisher Exact tests across the three conditions were also run and is what was reported in the manuscript. The `p_value_adj` column shows corrected p-values using the Holm-Bonferroni method.
 
 <br>
 
-
+</details>
 
 
 

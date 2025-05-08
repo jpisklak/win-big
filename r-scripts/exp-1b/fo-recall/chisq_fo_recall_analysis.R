@@ -20,19 +20,18 @@ fo <- fo %>%
     q_door_val == "risky_high" & fo_resp != 80 ~ "No",
   ))
 
-# Goodness of Fit test
+# Goodness of Fit tests
 #-------------------------------------------------------------------------------
 gf_high <- fo |> filter(fo$fo_cat != "0" & fo_value == "High")
 gf_high_tab <- xtabs(~ fo_cat, data = gf_high)
-chisq.test(gf_high_tab, p = c(0.5, 0.5))
+gf_high_test <- chisq.test(gf_high_tab, p = c(0.5, 0.5))
 
 gf_low <- fo |> filter(fo$fo_cat != "+80" & fo_value == "Low")
 gf_low_tab <- xtabs(~ fo_cat, data = gf_low)
-chisq.test(gf_low_tab, p = c(0.5, 0.5))
+gf_low_test <- chisq.test(gf_low_tab, p = c(0.5, 0.5))
 
-# 2 X 3 Pearson’s Chi-squared Test
+# 2 X 3 Pearson’s Chi-squared Tests
 #-------------------------------------------------------------------------------
-
 fo_high <- fo %>% filter(fo_value == "High")
 fo_high_tab <- xtabs(~ group + fo_eval, data = fo_high)
 
@@ -45,7 +44,7 @@ fo_high_eff <- cramerV(fo_high_tab, digits = 4)
 fo_low_test <- chisq.test(fo_low_tab)
 fo_low_eff <- cramerV(fo_low_tab, digits = 4)
 
-# Post Hoc Analysis 1 (preferred)-----------------------------------------------
+# Post Hoc Analysis 1 ----------------------------------------------------------
 # Standardized Residuals
 std_res_high <- chisq.test(fo_high_tab)$stdres
 std_res_low <- chisq.test(fo_low_tab)$stdres
@@ -78,7 +77,6 @@ h_8020_v_2080 <- fo %>%
   droplevels()
 h_8020_v_2080 <- xtabs(~ group + fo_eval, data = h_8020_v_2080)
 h_8020_v_2080 <- fisher.test(h_8020_v_2080)
-
 
 
 # Pairwise Fisher-Exact tests - Low Value
@@ -133,7 +131,3 @@ fish_tests <- tibble(
 )
 
 fish_tests$p_value_adj <- p.adjust(fish_tests$p_value, method = "holm")
-
-
-# https://rcompanion.org/handbook/H_04.html
-# https://www.statology.org/interpret-cramers-v/
