@@ -100,7 +100,7 @@ diffs$choice_value <- rep("High-Low", nrow(diffs))
 diffs <- diffs[, c(1, 2, 4, 3)]
 aov_res <- rbind(aov_res, diffs)
 aov_res$choice_value <- factor(aov_res$choice_value,
-                               levels = c("Low", "High", "High-Low")
+  levels = c("Low", "High", "High-Low")
 )
 
 

@@ -26,6 +26,23 @@ include_graphics(
 
 <details>
   <summary>
+  Plot - Extreme-Outcome Scores with 95% CIs (Blocks 5 & 6)
+  </summary>
+  
+<br>
+  
+```{r, out.width = '60%'}
+include_graphics(
+  file.path(main_dir,"plots/exp-1b/choice-trials/plt_risky_bar.png")
+)
+```
+
+<br>
+
+</details>
+
+<details>
+  <summary>
   Plot - Interaction plot with 95% CIs (Block 5 & 6)
   </summary>
 
