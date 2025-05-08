@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the dataset and R code associated with Experiments 1a and 1b from the study *Effects of Initial Experiences on Risky Choice* by Elliot A. Ludvig, Neil McMillan, Jeffrey M. Pisklak, Nick Simonsen, Alice Mason, Jason Long, Marcia L. Spetch, and Christopher R. Madan.
+This repository contains the data and R code associated with Experiments 1a and 1b from the study *Effects of Initial Experiences on Risky Choice* by Elliot A. Ludvig, Neil McMillan, Jeffrey M. Pisklak, Nick Simonsen, Alice Mason, Jason Long, Marcia L. Spetch, and Christopher R. Madan.
 
 **GitHub Repository:**
 
@@ -14,13 +14,13 @@ This repository contains the dataset and R code associated with Experiments 1a a
 
 The most accessible form of the data to download is `exp_1a_data.csv` and `exp_1b_data.csv` respectively, located within the `./data` directory.
 
-To view the results document, download `win-big-results--yyyy-mm-dd.html` and open it in your web browser.
+To view the results document, download `win-big-results--yyyy-mm-dd.html` and open it in a web browser.
 
 ## Contents
 
 The directory, file, and variable names within this repository are designed to be self-explanatory.
 
-- `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document.
+- `generate_markdown.R`: An R script used to run all the files necessary to produce the HTML results document `win-big-results--yyyy-mm-dd.html`.
 
 - `/data`: Contains cleaned versions of the raw data generated with `/r-scripts/exp-1a/exp_1a_data_filter.R` and `/r-scripts/exp-1b/exp_1b_data_filter.R`
 
