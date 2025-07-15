@@ -121,7 +121,6 @@ diffs |>
     d = (m - mu) / sd(cp)
   )
 
-
 dodge <- 0.9
 
 aov_bar <- ggplot(diffs, aes(x = group, y = cp)) +
