@@ -104,7 +104,7 @@ aov_res$choice_value <- factor(aov_res$choice_value,
 )
 
 # Sum stats for difference scores
-diffs |> 
+diffs_summary <- diffs |> 
   group_by(group) |> 
   summarise(
     n = length(cp),

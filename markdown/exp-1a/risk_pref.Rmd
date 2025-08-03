@@ -60,6 +60,22 @@ include_graphics(
 
 <details>
   <summary>
+  Summary Stats for Extreme-Outcome Scores
+  </summary>
+  
+<br>
+
+```{r}
+kable(diffs_summary, 'html', digits = 4) %>%
+  kable_classic(full_width = T, position = "center", html_font = "Arial")
+```
+
+<br>
+
+</details>
+
+<details>
+  <summary>
   Main Effects
   </summary>
 

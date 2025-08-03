@@ -98,14 +98,14 @@ diffs <- aov_res %>%
 
 diffs$choice_value <- rep("High-Low", nrow(diffs))
 diffs <- diffs[, c(1, 2, 4, 3)]
+
 aov_res <- rbind(aov_res, diffs)
 aov_res$choice_value <- factor(aov_res$choice_value,
   levels = c("Low", "High", "High-Low")
 )
 
-
 # Sum stats for difference scores
-diffs |> 
+diffs_summary <- diffs |> 
   group_by(group) |> 
   summarise(
     n = length(cp),
