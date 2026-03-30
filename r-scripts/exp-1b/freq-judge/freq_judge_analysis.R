@@ -28,25 +28,25 @@ fj_long$subject <- factor(fj_long$subject)
 
 # Models
 base <- lme(fj_resp ~ 1,
-  random = ~ 1 | subject / fj_value,
+  random = ~ 1 | subject,
   method = "ML",
   data = fj_long
 )
 
 cond_mod <- lme(fj_resp ~ group,
-  random = ~ 1 | subject / fj_value,
+  random = ~ 1 | subject,
   method = "ML",
   data = fj_long
 )
 
 HL_mod <- lme(fj_resp ~ group + fj_value,
-  random = ~ 1 | subject / fj_value,
+  random = ~ 1 | subject,
   method = "ML",
   data = fj_long
 )
 
 int_mod <- lme(fj_resp ~ group + fj_value + group:fj_value,
-  random = ~ 1 | subject / fj_value,
+  random = ~ 1 | subject,
   method = "ML",
   data = fj_long
 )
@@ -66,3 +66,8 @@ pc <- as.data.frame(summary(int_mod)$tTable)
 
 pc$r_effect <- sqrt((pc$`t-value`^2) / (pc$`t-value`^2 + pc$DF))
 
+# Residuals
+#plot(int_mod)
+#plot(int_mod, resid(.) ~ fitted(.) | subject)
+#qqnorm(resid(int_mod))
+#qqnorm(ranef(int_mod)[, 1])

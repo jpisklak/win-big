@@ -32,7 +32,7 @@ contrasts(risky_5_6$choice_value) <- ` high_vs_low `
 
 # Multilevel model
 base_mod <- lme(cp ~ 1,
-  random = ~ 1 | subject / choice_value,
+  random = ~ 1 | subject,
   method = "ML", data = risky_5_6
 )
 
@@ -49,3 +49,9 @@ risky_main
 
 # Planned Comparisons
 summary(grp_val)
+
+# Residuals
+#plot(grp_val)
+#plot(grp_val, resid(.) ~ fitted(.) | subject)
+#qqnorm(resid(grp_val))
+#qqnorm(ranef(grp_val)[, 1])
